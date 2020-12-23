@@ -9,6 +9,9 @@ export default function about() {
       <style jsx>
         {`
            {
+            .about-header {
+              background-url: ;
+            }
           }
         `}
       </style>
