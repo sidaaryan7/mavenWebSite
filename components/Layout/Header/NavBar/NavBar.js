@@ -116,7 +116,7 @@ export default function NavBar() {
                 </Link>
               </li>
               <li>
-                <Link href="">
+                <Link href="contact">
                   <a>CONTACT</a>
                 </Link>
               </li>
@@ -140,12 +140,17 @@ export default function NavBar() {
         .nav-area>ul>li{
             float:left;
             position:relative;
+            
         }
-        
+        .nav-area ul ul li{
+            margin:5%;
+        }
         .nav-area ul ul{
             position:absolute;
             padding:0;
-            min-width:160px;
+            /*min-width:160px;*/
+            width:300px;
+            height:500px;
             display:none;
             top:100%;
             left:0;
@@ -183,6 +188,10 @@ export default function NavBar() {
           
           .nav-area ul li:hover>ul{
               display:block;
+          }
+          .nav-area ul li a:active,
+          .nav-area ul li a:hover{
+              border-bottom:solid 3px red;
           }
           
           

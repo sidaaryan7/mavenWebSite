@@ -16,10 +16,12 @@ class MyDocument extends Document {
             integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
             crossorigin="anonymous"
           />
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeHuN4dZi-mzTXRNPv_w7fQl4qlFHJyQM"></script>
         </Head>
         <body>
           <Main />
           <NextScript />
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         </body>
       </Html>
     );

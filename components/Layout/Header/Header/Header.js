@@ -71,7 +71,7 @@ export default function Header() {
         {`.h-main{
           background-Image:url("/images/MaskGroup.png");
           background-size:100%;
-          background-repeat:none;
+          
           height:966px;
 
           
