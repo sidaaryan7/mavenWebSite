@@ -7,6 +7,15 @@ export default function Footer() {
     <div className="container">
       <div className="row footer-r">
         <div className="col">
+          <div className="row">
+            <div className="col">
+              <Image
+                src="/images/logoFooter.svg"
+                width={100}
+                height={50}
+              ></Image>
+            </div>
+          </div>
           <p className="text2">
             Don’t be shy, <span>Say Hi.</span>
           </p>

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import NavBar from "../NavBar/NavBar";
 
 export default function Header() {
+  const [active, setActive] = useState("");
   return (
     <div className="h-main">
       <NavBar />
@@ -45,6 +46,11 @@ export default function Header() {
                     layout="fixed"
                     width={35}
                     height={30}
+                    id="arrow"
+                    className="text-4-img"
+                    onClick={() => {
+                      setActive("FirstCard");
+                    }}
                   ></Image>
                 </div>
               </div>
@@ -58,6 +64,13 @@ export default function Header() {
                     layout="fixed"
                     width={100}
                     height={50}
+                    id="arrow1"
+                    onClick={() => {
+                      $("#arrow1").css({
+                        transform: "rotate(90deg)",
+                        transition: "all .2s ease",
+                      });
+                    }}
                   ></Image>
                 </div>
               </div>

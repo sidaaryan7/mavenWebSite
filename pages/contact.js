@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../components/Layout/Footer/Footer";
 import Copywritefooter from "../components/Layout/Footer/Copywritefooter";
 import ContactForm from "../components/Contactus/ContactForm/ContactForm";
+import LocationMap from "../components/LocationMap/LocationMap";
 
 export default function contact() {
   return (
@@ -18,8 +19,7 @@ export default function contact() {
       </div>
       <div className="row ">
         <div className="col-12">
-          map
-          <div>adresse</div>
+          <LocationMap />
         </div>
       </div>
       <div className="row ">

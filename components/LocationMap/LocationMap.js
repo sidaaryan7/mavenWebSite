@@ -12,6 +12,42 @@ class LocationMap extends Component {
       lng: -74.005974,
     });
   };
+
+  l2 = () => {
+    this.setState({
+      lat: 40.301498,
+      lng: -83.06754,
+    });
+  };
+
+  l3 = () => {
+    this.setState({
+      lat: 34.052235,
+      lng: -118.243683,
+    });
+  };
+
+  l4 = () => {
+    this.setState({
+      lat: 28.613939,
+      lng: 77.209023,
+    });
+  };
+
+  l5 = () => {
+    this.setState({
+      lat: 40.712776,
+      lng: -74.005974,
+    });
+  };
+
+  l6 = () => {
+    this.setState({
+      lat: 28.59384,
+      lng: 77.34148,
+    });
+  };
+
   render() {
     const GoogleMapExample = withGoogleMap((props) => (
       <GoogleMap
@@ -27,8 +63,8 @@ class LocationMap extends Component {
           }
           mapElement={<div style={{ height: `100%` }} />}
         />
-        <div>
-          <button value="1" onClick={this.l1(e)}>
+        <div className="d-flex justify-content-center buttonContainer">
+          <button value="1" onClick={this.l1}>
             NEW JERSEY,USA
           </button>
           <button value="2" onClick={this.l2}>
@@ -47,6 +83,27 @@ class LocationMap extends Component {
             NOIDA,INDIA
           </button>
         </div>
+
+        <style jsx>
+          {`
+             {
+              button {
+                margin: 3%;
+                font-family: Poppins;
+ 
+  
+ 
+  
+}
+.buttonContainer{
+  background-image: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0.2) 58%, rgba(0, 0, 0, 0.04) 71%, rgba(0, 0, 0, 0.01) 81%, rgba(0, 0, 0, 0) 89%);
+  
+
+}
+              }
+            }
+          `}
+        </style>
       </div>
     );
   }
