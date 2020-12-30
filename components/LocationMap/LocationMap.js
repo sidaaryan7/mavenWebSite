@@ -64,22 +64,22 @@ class LocationMap extends Component {
           mapElement={<div style={{ height: `100%` }} />}
         />
         <div className="d-flex justify-content-center buttonContainer">
-          <button value="1" onClick={this.l1}>
+          <button className="button" value="1" onClick={this.l1}>
             NEW JERSEY,USA
           </button>
-          <button value="2" onClick={this.l2}>
+          <button className="button" value="2" onClick={this.l2}>
             DELAWARE,USA
           </button>
-          <button value="3" onClick={this.l3}>
+          <button className="button" value="3" onClick={this.l3}>
             LOS ANGELES,USA
           </button>
-          <button value="4" onClick={this.l4}>
+          <button className="button" value="4" onClick={this.l4}>
             NEW DELHI,INDIA
           </button>
-          <button value="5" onClick={this.l5}>
+          <button className="button" value="5" onClick={this.l5}>
             DELAWARE,USA
           </button>
-          <button value="6" onClick={this.l6}>
+          <button className="button" value="6" onClick={this.l6}>
             NOIDA,INDIA
           </button>
         </div>
@@ -90,10 +90,17 @@ class LocationMap extends Component {
               button {
                 margin: 3%;
                 font-family: Poppins;
+                background: none;
+               border-left: 3px solid black;
+}
+
  
   
  
   
+}
+
+
 }
 .buttonContainer{
   background-image: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0.2) 58%, rgba(0, 0, 0, 0.04) 71%, rgba(0, 0, 0, 0.01) 81%, rgba(0, 0, 0, 0) 89%);

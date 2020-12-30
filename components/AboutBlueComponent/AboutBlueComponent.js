@@ -5,14 +5,52 @@ export default function AboutBlueComponent({ title, content }) {
     <div className="container-fluid">
       <div className="row">
         <div className="col d-flex justify-content-left">
-          <p>{title}</p>
+          <p className="title">{title}</p>
         </div>
       </div>
       <div className="row">
-        <div classNam="col d-flex justify-content-center">
-          <p>{content}</p>
+        <div classNam="col d-flex justify-content-center ">
+          <p className="content ">{content}</p>
         </div>
       </div>
+      <style jsx>
+        {`
+           {
+            p {
+              color: white;
+            }
+            .title {
+              height: 53px;
+              margin: 85px 223px 34px 0;
+              font-family: Poppins;
+              font-size: 38px;
+              font-weight: 500;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.37;
+              letter-spacing: normal;
+              text-align: left;
+              color: #ffffff;
+            }
+
+            .content {
+              width: 1052px;
+              height: 389px;
+              margin: 34px 104px 0 0;
+              opacity: 0.9;
+              font-family: Roboto;
+              font-size: 16px;
+              font-weight: normal;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.5;
+              letter-spacing: normal;
+              text-align: left;
+              color: #ffffff;
+            }
+          }
+        `}
+      </style>
     </div>
   );
 }

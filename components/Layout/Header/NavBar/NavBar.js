@@ -8,16 +8,18 @@ export default function NavBar() {
       <div className="row">
         <div className="col-4 d-flex justify-content-center">
           <a className="logo">
-            <Image
-              className="logo-image"
-              src="/images/Logo.png"
-              layout="fixed"
-              width={200}
-              height={50}
-            ></Image>
+            <Link href="/">
+              <Image
+                className="logo-image"
+                src="/images/Logo.png"
+                layout="fixed"
+                width={130}
+                height={35}
+              ></Image>
+            </Link>
           </a>
         </div>
-        <div className="col-8 d-flex justify-content-center">
+        <div className="col-8 d-flex  justify-content-center">
           <nav className="nav-area">
             <ul>
               <li>
@@ -159,6 +161,7 @@ export default function NavBar() {
         }
         .nav-area ul ul a{
             color:black;
+            
         }
         ul {
           float: left;
@@ -167,7 +170,11 @@ export default function NavBar() {
           
         }
         a {
-            color: white;}
+            color: white;
+            
+            text-transform: capitalize;
+            
+            }
             li {
             float: left;
             margin: 30px;

@@ -9,11 +9,13 @@ export default function Footer() {
         <div className="col">
           <div className="row">
             <div className="col">
-              <Image
-                src="/images/logoFooter.svg"
-                width={100}
-                height={50}
-              ></Image>
+              <Link href="/">
+                <Image
+                  src="/images/logoFooter.svg"
+                  width={100}
+                  height={50}
+                ></Image>
+              </Link>
             </div>
           </div>
           <p className="text2">

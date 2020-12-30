@@ -3,198 +3,184 @@ import Image from "next/image";
 import Link from "next/link";
 import NavBar from "../NavBar/NavBar";
 
-export default function Header() {
-  const [active, setActive] = useState("");
+export default function Header({ doSomething }) {
   return (
-    <div className="h-main">
-      <NavBar />
-
-      {/*red color div below nav bar */}
-      <div className="row header-red">
-        <div className="col-6">
-          <div className="text-1">
-            <p>EXPERT SINCE 1997</p>
-          </div>
-
-          <div className="text-2">
-            <p>We Deliver a Meaningful Hr Experience.</p>
+    <>
+      <div className="row">
+        <div className="col header">
+          <NavBar />
+          <div className="row text-banner-section">
+            <div
+              class=" col-6 textbox-1 "
+              style={{ background: "#ff6139", "padding-left": "15%" }}
+            >
+              <p className="textbox-1-p1">EXPERTS SINCE 1997</p>
+              <p className="textbox-1-p2">
+                We Deliver a Meaningful HR EXPERIENCE.
+              </p>
+            </div>
+            <div className="col-3" style={{ background: "#ff6139" }}>
+              <p className="textbox-1-p3">
+                A passionate team of good people is working round the clock in
+                Making an indelible mark in the world of Staffing and Talent
+                Acquisition industry by providing efficient solutions.
+              </p>
+              <p className="textbox-1-p4">Know more</p>
+              <div className="whitearrow">
+                <Image
+                  src="/images/arrow.svg"
+                  layout="fixed"
+                  height={28}
+                  width={33}
+                ></Image>
+              </div>
+            </div>
+            <div className="col-3" style={{ background: "#ffffff" }}>
+              <p className="textbox-2-p1">Scroll to discover</p>
+              <div className="blackarrow">
+                <Image
+                  src="/images/blackarrow.svg"
+                  layout="fixed"
+                  height={33}
+                  width={28}
+                  onClick={doSomething}
+                ></Image>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-6  justify-content-center">
-          <div className="row">
-            <div className="col ">
-              <div className="text-3">
-                <p>
-                  A passionate team of good people is working round the clock in
-                  Making an indelible mark in the world of Staffing and Talent
-                  Acquisition industry by providing efficient solutions. Since
-                  its inception in 2008, Maven Workforce has come across a long
-                  way and has become a global leader in Staffing and Talent
-                  Acquisition industry. From small to medium to enterprise
-                  level, Maven has been advising clients globally for Talent
-                  Search and acquisition by identifying ideal talent who aid in
-                  giving companies a competitive edge.
-                </p>
-              </div>
-
-              <div className="text-4">
-                <p>Know More</p>
-
-                <div className="text-4-img">
-                  <Image
-                    src="/images/arrow.svg"
-                    layout="fixed"
-                    width={35}
-                    height={30}
-                    id="arrow"
-                    className="text-4-img"
-                    onClick={() => {
-                      setActive("FirstCard");
-                    }}
-                  ></Image>
-                </div>
-              </div>
-            </div>
-            <div className="col">
-              <div className="text-5">
-                <p>Scroll To Discover</p>
-                <div className="text-5-img">
-                  <Image
-                    src="/images/blackarrow.svg"
-                    layout="fixed"
-                    width={100}
-                    height={50}
-                    id="arrow1"
-                    onClick={() => {
-                      $("#arrow1").css({
-                        transform: "rotate(90deg)",
-                        transition: "all .2s ease",
-                      });
-                    }}
-                  ></Image>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div
+          className="chatbox"
+          style={{
+            width: "78px",
+            height: "78px",
+            margin: "360px 20px 21px 24.5px",
+            padding: "11px",
+            position: "absolute",
+            top: "493px",
+            left: "1759px",
+          }}
+        >
+          <Image
+            src="/images/chatbot.svg"
+            layout="fixed"
+            height={78}
+            width={78}
+          ></Image>
         </div>
       </div>
-
-      {/*inlinie stylin*/}
       <style jsx>
-        {`.h-main{
-          background-Image:url("/images/MaskGroup.png");
-          background-size:100%;
-          
-          height:966px;
+        {`
+           {
+            .header {
+              background-image: radial-gradient(
+                  rgba(255, 255, 255, -0.15),
+                  rgba(0, 0, 0, 0.9)
+                ),
+                url("images/MaskGroup.png");
+              background-repeat: no-repeat;
 
-          
-          object-fit:cover;
-          
-          
-    
-        }
-          
-          
-          
-          
-          .header-red {
-            background-color: rgba(255,97,57);
-            width: 90%;
-            height:400px;
-            margin-top: 440px;
-            
+              background-size: 100%;
+              height: 966px;
+              object-fit: cover;
+            }
 
+            .text-banner-section {
+              width: 80%;
+              margin-top: 24%;
+            }
+            p {
+              color: white;
+              font-family: Roboto;
+            }
+
+            .textbox-2 {
+              width: 303px;
+              height: 266px;
+              margin: 123px 0 0;
+              padding: 87px 32px 0 52px;
+              object-fit: contain;
+              background-color: #ffffff;
+            }
+            .textbox-1-p1 {
+              height: 11px;
+              margin: 41.5px 317px 13px 0;
+              opacity: 0.75;
+              font-family: Roboto;
+              font-size: 10px;
+              font-weight: normal;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 5.4;
+              letter-spacing: 3.3px;
+              text-align: left;
+              color: #ffffff;
+              margin-bottom: 10%;
+            }
+            .textbox-1-p2 {
+              width: 267px;
+              height: 145px;
+              margin: 13px 203px 54.5px 0;
+              font-family: Poppins;
+              font-size: 38px;
+              font-weight: 500;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.21;
+              letter-spacing: normal;
+              text-align: left;
+              color: #ffffff;
+            }
+            .textbox-1-p3 {
+              width: 473px;
+
+              margin: 123px -146px 0;
+              padding: 0.5px 85px 0.5px 156px;
+              object-fit: contain;
+            }
+            .textbox-1-p4 {
+              margin-left: 44%;
+              margin-top: 12%;
+              position: relative;
+              /* left: -41%; */
+              right: 41%;
+            }
+            .textbox-2-p1 {
+              color: #ff6139;
+              height: 42px;
+              width: 70px;
+              position: relative;
+              left: 43%;
+              top: 19%;
+            }
+            .whitearrow {
+              position: relative;
+              left: 52%;
+              bottom: 12%;
+            }
+            .bg-col-1 {
+              background: #ff6139;
+            }
+            .bg-col-2 {
+              background: #ffffff;
+            }
+            .blackarrow {
+              position: relative;
+              top: 23%;
+              left: 48%;
+            }
+            .chatbot {
+              width: 78px;
+              height: 78px;
+              margin: 360px 20px 21px 24.5px;
+              padding: 11px;
+              position: absolute;
+              top: 493px;
+              left: 1759px;
+            }
           }
-          .text-1{
-              margin-left:190px;
-          }
-          .text-1 p {
-            width: 153px;
-            height: 11px;
-            margin: 41.5px 317px 13px 0;
-            opacity: 0.75;
-            font-family: Roboto;
-            font-size: 10px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 5.4;
-            letter-spacing: 3.3px;
-            text-align: left;
-            color: #ffffff;
-          }
-          .text-2{
-            width: 267px;
-           height: 145px;
-           margin: 13px 203px 54.5px 0;
-           font-family: Poppins;
-            font-size: 38px;
-            font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.21;
-             letter-spacing: normal;
-            text-align: left;
-            color: #ffffff;
-        margin-left:190px;
-          }
-        .text-3{
-           
-            width: 253px;
-            height: 119px;
-            margin: 41.5px 0 22px 50px;
-            font-family: Roboto;
-            font-size: 13px;
-            font-weight: normal;
-             font-stretch: normal;
-            font-style: normal;
-            line-height: 1.85;
-            letter-spacing: normal;
-            text-align: left;
-            color: #ffffff;
-            /*margin-left: 900px;*/
-           /* margin-top: -225px;*/
-        }
-        
-        .text-4{
-
-   
-  font-family: Poppins;
-  font-size: 16px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.19;
-  letter-spacing: normal;
-  text-align: left;
-  color: #ffffff;
-  margin-left: 51px;
-    margin-top: 200px;
-    
-} 
-
-.text-4-img{
-  margin-left:100px;
-  margin-top: -40px;
-}
-.text-5{
-  width: 303px;
-  height: 266px;
-  margin: 123px 0 0;
-  padding: 87px 32px 0 52px;
-  object-fit: contain;
-  background-color: #ffffff;
-  margin-left: 543px;
-  height:400px;
-  margin-top: -390px;
-
-}
-.text2 p{
-  
-}
-        }
         `}
       </style>
-    </div>
+    </>
   );
 }

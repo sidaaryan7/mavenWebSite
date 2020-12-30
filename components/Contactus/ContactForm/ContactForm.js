@@ -45,7 +45,7 @@ export default function ContactForm() {
         .main {
           width: 100%;
           height: 900px;
-          margin: 729px 0 0;
+          margin: 0 0 0;
           padding: 128px 206px 128px 161px;
           background-color: #202940;
         }
