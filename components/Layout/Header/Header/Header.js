@@ -38,13 +38,11 @@ export default function Header({ doSomething }) {
             <div className="col-3" style={{ background: "#ffffff" }}>
               <p className="textbox-2-p1">Scroll to discover</p>
               <div className="blackarrow">
-                <Image
+                <input
+                  type="image"
                   src="/images/blackarrow.svg"
-                  layout="fixed"
-                  height={33}
-                  width={28}
                   onClick={doSomething}
-                ></Image>
+                />
               </div>
             </div>
           </div>
