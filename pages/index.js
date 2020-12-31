@@ -24,10 +24,18 @@ export default function Home() {
           }}
         />
       )}
-      {active === "ThirdCard" && <SolutionHome />}
-
-      <Footer />
-      <Copywritefooter />
+      {active === "ThirdCard" && (
+        <SolutionHome
+          doSomething={() => {
+            setActive("FourthCard");
+          }}
+        />
+      )}
+      {active === "FourthCard" && (
+        <>
+          <Footer /> <Copywritefooter />
+        </>
+      )}
     </>
   );
 }

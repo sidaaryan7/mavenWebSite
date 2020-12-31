@@ -7,7 +7,7 @@ export default function Footer() {
     <div className="container">
       <div className="row footer-r">
         <div className="col">
-          <div className="row">
+          <div className="row icon">
             <div className="col">
               <Link href="/">
                 <Image
@@ -25,10 +25,11 @@ export default function Footer() {
           <div className="text3">
             <p className="text3-1">Start a conversation</p>
             <p className="text3-2">Contact us</p>
+            <input type="image" src=""></input>
           </div>
         </div>
 
-        <div className="col">
+        <div className="col navlinks">
           <div className="row nav-r">
             <div className="col ">
               <p>About us</p>
@@ -141,6 +142,7 @@ export default function Footer() {
               font-size: 77px;
               align: left;
               width: 80%;
+              padding-bottom: 5%;
             }
             span {
               color: #ff6139;
@@ -161,6 +163,7 @@ export default function Footer() {
   letter-spacing: normal;
   text-align: left;
   color: #000000;
+  margin-bottom: 7%;
 }
 .text3-2{
   width: 88px;
@@ -178,10 +181,16 @@ export default function Footer() {
 }
 .footer-r{
   padding:10% 10%;
+  padding-bottom:20%;
 }
 ul{
   list-style:none;
 }
+
+.navlinks{
+  padding-top:14%;
+}
+
 .nav-r p{
   border-left:solid #ff6139;
   padding-left:10px;
@@ -201,6 +210,12 @@ h6{
   letter-spacing: normal;
   text-align: left;
   color: #000000;
+}
+.icon{
+  padding-bottom: 9%;
+}
+h6{
+  padding-top: 10%;
 }
             }
           }

@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "../Layout/Header/NavBar/NavBar";
 import Image from "next/image";
 
-export default function SolutionHome() {
+export default function SolutionHome({ doSomething }) {
   return (
     <>
       <div className="row">
@@ -103,6 +103,11 @@ export default function SolutionHome() {
 
         <div className="chatbox">
           <input type="image" src="/images/chatbot.svg" />
+        </div>
+
+        <div>
+          <button onClick={doSomething}>SCROLL</button>
+          <input type="image" src="/images/scrollimg.svg"></input>
         </div>
         <style jsx>
           {`
