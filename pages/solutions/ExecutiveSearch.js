@@ -1,5 +1,8 @@
 import React from "react";
 import NavBar from "../../components/Layout/Header/NavBar/NavBar";
+import ContactForm from "../../components/Contactus/ContactForm/ContactForm";
+import Footer from "../../components/Layout/Footer/Footer";
+import Copywritefooter from "../../components/Layout/Footer/Copywritefooter";
 
 export default function ExecutiveSeacrh() {
   return (
@@ -113,7 +116,7 @@ export default function ExecutiveSeacrh() {
             </div>
           </div>
 
-          <div className="row">
+          <div className="row white-section-row5">
             <div classNam="col">
               <p className="textbox-common white-section-p6">
                 We represent you professionally to candidates; the whole process
@@ -160,6 +163,23 @@ export default function ExecutiveSeacrh() {
 
         <div className="row">
           <div className="col blacksection"></div>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col">
+          <ContactForm />
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col">
+          <Footer />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <Copywritefooter />
         </div>
       </div>
       <style jsx>
@@ -224,7 +244,7 @@ export default function ExecutiveSeacrh() {
               line-height: 24px;
             }
             .textbox1 {
-              padding-right: 34%;
+              padding-right: 14%;
             }
             .white-section {
               border: 1px solid black;
@@ -238,7 +258,10 @@ export default function ExecutiveSeacrh() {
             }
 
             .white-section-row4 {
-              padding-right: 34%;
+              padding-right: 14%;
+            }
+            .white-section-row5 {
+              padding-right: 14%;
             }
             .white-section-p1 {
               font-family: Poppins;
@@ -250,6 +273,7 @@ export default function ExecutiveSeacrh() {
               letter-spacing: normal;
               text-align: left;
               color: #000000;
+              width: 116%;
             }
 
             .white-section-p2 {
