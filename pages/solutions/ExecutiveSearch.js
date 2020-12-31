@@ -1,8 +1,9 @@
 import React from "react";
 import NavBar from "../../components/Layout/Header/NavBar/NavBar";
-import ContactForm from "../../components/Contactus/ContactForm/ContactForm";
+
 import Footer from "../../components/Layout/Footer/Footer";
 import Copywritefooter from "../../components/Layout/Footer/Copywritefooter";
+import ContactForm from "../../components/ContactForm/";
 
 export default function ExecutiveSeacrh() {
   return (

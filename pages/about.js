@@ -3,8 +3,8 @@ import NavBar from "../components/Layout/Header/NavBar/NavBar";
 import Copywritefooter from "../components/Layout/Footer/Copywritefooter";
 import Footer from "../components/Layout/Footer/Footer";
 import OurClient from "../components/OurClient/OurClient";
-import LocationMap from "../components/LocationMap/LocationMap";
-import AboutBlueComponent from "../components/AboutBlueComponent/AboutBlueComponent";
+import LocationMap from "../components/LocationMap";
+import AboutBlueComponent from "../components/AboutBlueComponent";
 import Image from "next/image";
 
 export default function about() {

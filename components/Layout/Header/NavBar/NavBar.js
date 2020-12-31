@@ -28,7 +28,7 @@ export default function NavBar() {
                 </Link>
               </li>
               <li>
-                <Link href="about">
+                <Link href="/about">
                   <a>ABOUT US</a>
                 </Link>
               </li>
@@ -39,7 +39,7 @@ export default function NavBar() {
                 </Link>
                 <ul>
                   <li>
-                    <Link href="">
+                    <Link href="/solutions/ExecutiveSearch">
                       <a>Executive Search</a>
                     </Link>
                   </li>
@@ -134,76 +134,66 @@ export default function NavBar() {
       </nav>
 
       <style jsx>{`
-        .nav-area:after{
-            content:'';
-            clear:both;
-            display:block;
+        .nav-area:after {
+          content: "";
+          clear: both;
+          display: block;
         }
-        .nav-area>ul>li{
-            float:left;
-            position:relative;
-            
+        .nav-area > ul > li {
+          float: left;
+          position: relative;
         }
-        .nav-area ul ul li{
-            margin:5%;
+        .nav-area ul ul li {
+          margin: 5%;
         }
-        .nav-area ul ul{
-            position:absolute;
-            padding:0;
-            /*min-width:160px;*/
-            width:300px;
-            height:500px;
-            display:none;
-            top:100%;
-            left:0;
-            background-color:white;
-            
+        .nav-area ul ul {
+          position: absolute;
+          padding: 0;
+          /*min-width:160px;*/
+          width: 300px;
+          height: 500px;
+          display: none;
+          top: 100%;
+          left: 0;
+          background-color: white;
         }
-        .nav-area ul ul a{
-            color:black;
-            
+        .nav-area ul ul a {
+          color: black;
         }
         ul {
           float: left;
 
           list-style: none;
-          
         }
         a {
-            color: white;
-            
-            text-transform: capitalize;
-            
-            }
-            li {
-            float: left;
-            margin: 30px;
-            font-family: Roboto;
-            font-size: 15px;
-            font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 2.3;
-            letter-spacing: 2.7px;
-            text-align: left;
-            color: #ffffff;
-}
-          }
-          .logo{
-              padding-top:4%;
-          }
-          
-          .nav-area ul li:hover>ul{
-              display:block;
-          }
-          .nav-area ul li a:active,
-          .nav-area ul li a:hover{
-              border-bottom:solid 3px red;
-          }
-          
-          
-          
-          
+          color: white;
+
+          text-transform: capitalize;
+        }
+        li {
+          float: left;
+          margin: 30px;
+          font-family: Roboto;
+          font-size: 15px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 2.3;
+          letter-spacing: 2.7px;
+          text-align: left;
+          color: #ffffff;
+        }
+        .logo {
+          padding-top: 4%;
+        }
+
+        .nav-area ul li:hover > ul {
+          display: block;
+        }
+        .nav-area ul li a:active,
+        .nav-area ul li a:hover {
+          border-bottom: solid 3px red;
+        }
       `}</style>
     </div>
   );

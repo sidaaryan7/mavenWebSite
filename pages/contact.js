@@ -1,10 +1,11 @@
 import React from "react";
 import Footer from "../components/Layout/Footer/Footer";
 import Copywritefooter from "../components/Layout/Footer/Copywritefooter";
-import ContactForm from "../components/Contactus/ContactForm/ContactForm";
-import LocationMap from "../components/LocationMap/LocationMap";
+import ContactForm from "../components/ContactForm";
+
 import NavBar from "../components/Layout/Header/NavBar/NavBar";
 import Image from "next/image";
+import LocationMap from "../components/LocationMap";
 
 export default function contact() {
   return (
