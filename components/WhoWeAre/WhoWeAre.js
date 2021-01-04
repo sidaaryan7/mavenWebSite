@@ -262,6 +262,13 @@ export default function WhoWeAre({ doSomething }) {
               padding-left: 15%
               
             }
+            .scroll{
+              margin: 360px 20px 21px 24.5px;
+    padding: 11px;
+    position: absolute;
+    top: 493px;
+    left: 0%;
+            }
             .scroll button{
               border:none;
               

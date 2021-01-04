@@ -5,8 +5,8 @@ import Header from "../components/Layout/Header/Header/Header";
 import SolutionHome from "../components/SolutionHome/SolutionHome";
 import WhoWeAre from "../components/WhoWeAre/WhoWeAre";
 import OurClient from "../components/OurClient/OurClient";
-import NavBar from "../components/Layout/Header/NavBar/NavBar";
 
+import LocationHome from "../components/LocationHome";
 export default function Home() {
   const [active, setActive] = useState("FirstCard");
   OurClient;
@@ -34,8 +34,20 @@ export default function Home() {
         />
       )}
       {active === "FourthCard" && (
+        <LocationHome
+          doSomething={() => {
+            setActive("FifthCard");
+          }}
+        />
+      )}
+      {active === "FifthCard" && (
         <>
-          <Footer /> <Copywritefooter />
+          <Footer
+            doSomething={() => {
+              setActive("");
+            }}
+          />{" "}
+          <Copywritefooter />
         </>
       )}
     </>

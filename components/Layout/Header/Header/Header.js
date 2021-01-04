@@ -11,7 +11,7 @@ export default function Header({ doSomething }) {
           <NavBar />
           <div className="row text-banner-section">
             <div
-              class=" col-6 textbox-1 "
+              className=" col-6 textbox-1 "
               style={{ background: "#ff6139", "padding-left": "15%" }}
             >
               <p className="textbox-1-p1">EXPERTS SINCE 1997</p>
