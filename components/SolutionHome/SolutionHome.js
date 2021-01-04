@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "../Layout/Header/NavBar/NavBar";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SolutionHome({ doSomething }) {
   return (
@@ -105,10 +106,12 @@ export default function SolutionHome({ doSomething }) {
           <input type="image" src="/images/chatbot.svg" />
         </div>
 
-        <div>
-          <button onClick={doSomething}>SCROLL</button>
-          <input type="image" src="/images/scrollimg.svg"></input>
-        </div>
+        <Link href="/footer">
+          <div>
+            <button onClick={doSomething}>SCROLL</button>
+            <input type="image" src="/images/scrollimg.svg"></input>
+          </div>
+        </Link>
         <style jsx>
           {`
              {

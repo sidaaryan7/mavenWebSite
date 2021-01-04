@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../Layout/Header/NavBar/NavBar";
 import Image from "next/image";
-import index from "../Layout/Header/index";
+import Link from "next/link";
 
 export default function WhoWeAre({ doSomething }) {
   return (
@@ -122,11 +122,12 @@ export default function WhoWeAre({ doSomething }) {
         >
           <input type="image" src="/images/chatbot.svg" />
         </div>
-
-        <div className="scroll">
-          <button onClick={doSomething}>SCROLL</button>
-          <input type="image" src="/images/scrollimg.svg"></input>
-        </div>
+        <Link href="/oursolutionsHome">
+          <div className="scroll">
+            <button onClick={doSomething}>SCROLL</button>
+            <input type="image" src="/images/scrollimg.svg"></input>
+          </div>
+        </Link>
         <style jsx>
           {`
             p {

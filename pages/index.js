@@ -14,6 +14,7 @@ export default function Home() {
     <>
       {active === "FirstCard" && (
         <Header
+          id="header"
           doSomething={() => {
             setActive("SecondCard");
           }}

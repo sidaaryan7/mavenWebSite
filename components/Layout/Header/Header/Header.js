@@ -6,9 +6,9 @@ import NavBar from "../NavBar/NavBar";
 export default function Header({ doSomething }) {
   return (
     <>
-      <div className="row">
+      <div className="row" id="mainhome">
         <div className="col header">
-          <NavBar />
+          <NavBar id={"#mainhome"} />
           <div className="row text-banner-section">
             <div
               className=" col-6 textbox-1 "
@@ -35,16 +35,18 @@ export default function Header({ doSomething }) {
                 ></Image>
               </div>
             </div>
-            <div className="col-3" style={{ background: "#ffffff" }}>
-              <p className="textbox-2-p1">Scroll to discover</p>
-              <div className="blackarrow">
-                <input
-                  type="image"
-                  src="/images/blackarrow.svg"
-                  onClick={doSomething}
-                />
+            <Link href="/whoweareHome">
+              <div className="col-3" style={{ background: "#ffffff" }}>
+                <p className="textbox-2-p1">Scroll to discover</p>
+                <div className="blackarrow">
+                  <input
+                    type="image"
+                    src="/images/blackarrow.svg"
+                    onClick={doSomething}
+                  />
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
         <div

@@ -4,6 +4,7 @@ import NavBar from "../../components/Layout/Header/NavBar/NavBar";
 import Footer from "../../components/Layout/Footer/Footer";
 import Copywritefooter from "../../components/Layout/Footer/Copywritefooter";
 import ContactForm from "../../components/ContactForm/";
+import Image from "next/image";
 
 export default function ExecutiveSeacrh() {
   return (
@@ -87,13 +88,37 @@ export default function ExecutiveSeacrh() {
 
           <div className="row icon-row">
             <div className="col">
-              <div className="box-common box-1"></div>
+              <div className="box-common box-1 d-flex justify-content-center">
+                <Image
+                  src="/images/idea.svg"
+                  layout="fixed"
+                  height={57}
+                  width={57}
+                ></Image>
+                <p className="box-1-commmon-p">Visionary & strategic</p>
+              </div>
             </div>
             <div className="col ">
-              <div className="box-common box-2"></div>
+              <div className="box-common box-2 d-flex justify-content-center">
+                <Image
+                  src="/images/leader.svg"
+                  layout="fixed"
+                  height={62}
+                  width={52}
+                ></Image>
+                <p className="box-1-commmon-p">Guiding the team</p>
+              </div>
             </div>
             <div className="col ">
-              <div className="box-common box-3"></div>
+              <div className="box-common box-3 d-flex justify-content-center">
+                <Image
+                  src="/images/stats.svg"
+                  layout="fixed"
+                  height={57}
+                  width={57}
+                ></Image>
+                <p className="box-1-commmon-p">Assessing results</p>
+              </div>
             </div>
           </div>
 
@@ -144,12 +169,33 @@ export default function ExecutiveSeacrh() {
           </div>
 
           <div className="row pic-box">
-            <div className="col  pic-box1"></div>
-            <div className="col  pic-box2"></div>
-            <div className="col  pic-box3"></div>
+            <div className="col  pic-box1">
+              <Image
+                src="/images/flexistaffing.jpg "
+                layout="fixed"
+                height={144}
+                width={273}
+              ></Image>
+            </div>
+            <div className="col  pic-box2">
+              <Image
+                src="/images/itstaff.jpg "
+                layout="fixed"
+                height={144}
+                width={273}
+              ></Image>
+            </div>
+            <div className="col  pic-box3">
+              <Image
+                src="/images/proffesionalSearch.jpg "
+                layout="fixed"
+                height={144}
+                width={273}
+              ></Image>
+            </div>
           </div>
 
-          <div className="row">
+          <div className="row pic-box-text">
             <div className="col pic-text-box1">
               <p>Flexi Staffing</p>
             </div>
@@ -246,6 +292,7 @@ export default function ExecutiveSeacrh() {
             }
             .textbox1 {
               padding-right: 14%;
+              padding-bottom: 5%;
             }
             .white-section {
               border: 1px solid black;
@@ -263,6 +310,7 @@ export default function ExecutiveSeacrh() {
             }
             .white-section-row5 {
               padding-right: 14%;
+              margin-bottom: 5%;
             }
             .white-section-p1 {
               font-family: Poppins;
@@ -297,15 +345,18 @@ export default function ExecutiveSeacrh() {
             }
             .white-section-p3 {
             }
-            .white-section-p4 {
-            }
-            .white-section-p5 {
+            pic .white-section-p5 {
             }
             .white-section-p6 {
             }
             .box-common {
               width: 219px;
               height: 116px;
+              padding-top: 8%;
+            }
+
+            .icon-row {
+              margin-bottom: 5%;
             }
 
             .box-1 {
@@ -317,6 +368,27 @@ export default function ExecutiveSeacrh() {
 
             .box-3 {
               background-color: #f4f4f4;
+            }
+
+            .box-1 p {
+              color: white;
+              width: 89px;
+              height: 47px;
+              margin-left: 5%;
+            }
+
+            .box-2 p {
+              color: #304989;
+              width: 73px;
+              height: 47px;
+              margin-left: 5%;
+            }
+
+            .box-3 p {
+              color: #000000;
+              width: 79px;
+              height: 47px;
+              margin-left: 5%;
             }
 
             .exploremore-p {
@@ -334,22 +406,20 @@ export default function ExecutiveSeacrh() {
             .pic-box1 {
               width: 273px;
               height: 144px;
-              margin: 38px 40px 15px 39px;
-              border: 1px solid black;
+              margin: 38px 67px 15px -1px;
             }
 
             .pic-box2 {
               width: 273px;
               height: 144px;
-              margin: 38px 40px 15px 39px;
-              border: 1px solid black;
+              margin: 38px 40px 15px -57px;
             }
 
             .pic-box3 {
               width: 272px;
               height: 144px;
               margin: 38px 0 15px 40px;
-              border: 1px solid black;
+              padding-right: 10%;
             }
 
             .pic-text-box1 {
@@ -380,6 +450,7 @@ export default function ExecutiveSeacrh() {
               letter-spacing: normal;
               text-align: left;
               color: #000000;
+              margin-left: -9%;
             }
             .pic-text-box3 {
               width: 147px;
@@ -394,6 +465,9 @@ export default function ExecutiveSeacrh() {
               letter-spacing: normal;
               text-align: left;
               color: #000000;
+            }
+            .pic-box-text {
+              padding-bottom: 5%;
             }
           }
         `}

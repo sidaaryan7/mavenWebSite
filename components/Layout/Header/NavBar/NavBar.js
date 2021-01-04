@@ -2,13 +2,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function NavBar() {
+export default function NavBar({ id }) {
   return (
     <div className="container-fluid ">
       <div className="row">
         <div className="col-4 d-flex justify-content-center">
           <a className="logo">
-            <Link href="/">
+            <Link href="/mainHome">
               <Image
                 className="logo-image"
                 src="/images/Logo.png"
