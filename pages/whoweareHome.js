@@ -1,5 +1,5 @@
 import React from "react";
-import WhoWeAre from "../components/WhoWeAre/WhoWeAre";
+import WhoWeAre from "../components/WhoWeAre";
 
 export default function whoweareHome() {
   return (

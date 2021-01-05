@@ -1,9 +1,9 @@
 import React from "react";
-import Footer from "../components/Layout/Footer/Footer";
-import Copywritefooter from "../components/Layout/Footer/Copywritefooter";
+import Footer from "../components/Layout/Footer";
+
 import ContactForm from "../components/ContactForm";
 
-import NavBar from "../components/Layout/Header/NavBar/NavBar";
+import NavBar from "../components/Layout/Header/NavBar";
 import Image from "next/image";
 import LocationMap from "../components/LocationMap";
 
@@ -50,11 +50,7 @@ export default function contact() {
           <Footer />
         </div>
       </div>
-      <div className="row ">
-        <div className="col-12">
-          <Copywritefooter />
-        </div>
-      </div>
+
       <style jsx>
         {`
            {

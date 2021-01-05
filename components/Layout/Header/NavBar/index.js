@@ -2,21 +2,28 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function NavBar({ id }) {
+export default function NavBar(props) {
+  console.log(props);
   return (
     <div className="container-fluid ">
       <div className="row">
         <div className="col-4 d-flex justify-content-center">
           <a className="logo">
-            <Link href="/mainHome">
+            {
+              <Link href="/mainHome">
+                {/*}}
               <Image
                 className="logo-image"
-                src="/images/Logo.png"
+                src="/${props.logosrc}"
                 layout="fixed"
                 width={130}
                 height={35}
               ></Image>
-            </Link>
+            {{*/}
+
+                <img src={props.logosrc}></img>
+              </Link>
+            }
           </a>
         </div>
         <div className="col-8 d-flex  justify-content-center">
@@ -113,12 +120,12 @@ export default function NavBar({ id }) {
                 </Link>
               </li>
               <li>
-                <Link href="">
+                <Link href="/thoughtLeadership">
                   <a>THOUGHT LEADERSHIP</a>
                 </Link>
               </li>
               <li>
-                <Link href="contact">
+                <Link href="/contact">
                   <a>CONTACT</a>
                 </Link>
               </li>
@@ -134,10 +141,12 @@ export default function NavBar({ id }) {
       </nav>
 
       <style jsx>{`
-        .nav-area:after {
-          content: "";
-          clear: both;
-          display: block;
+         {
+          .nav-area:after {
+            content: "";
+            clear: both;
+            display: block;
+          }
         }
         .nav-area > ul > li {
           float: left;
@@ -166,7 +175,7 @@ export default function NavBar({ id }) {
           list-style: none;
         }
         a {
-          color: white;
+          color: ${props.color};
 
           text-transform: capitalize;
         }
@@ -190,8 +199,9 @@ export default function NavBar({ id }) {
         .nav-area ul li:hover > ul {
           display: block;
         }
-        .nav-area ul li a:active,
-        .nav-area ul li a:hover {
+
+        .nav-area ul li a:hover,
+        .nav-area ul li a:active {
           border-bottom: solid 3px red;
         }
       `}</style>

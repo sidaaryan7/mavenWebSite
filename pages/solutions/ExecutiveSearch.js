@@ -1,7 +1,7 @@
 import React from "react";
-import NavBar from "../../components/Layout/Header/NavBar/NavBar";
+import NavBar from "../../components/Layout/Header/NavBar";
 
-import Footer from "../../components/Layout/Footer/Footer";
+import Footer from "../../components/Layout/Footer";
 import Copywritefooter from "../../components/Layout/Footer/Copywritefooter";
 import ContactForm from "../../components/ContactForm/";
 import Image from "next/image";
@@ -224,11 +224,7 @@ export default function ExecutiveSeacrh() {
           <Footer />
         </div>
       </div>
-      <div className="row">
-        <div className="col">
-          <Copywritefooter />
-        </div>
-      </div>
+
       <style jsx>
         {`
           .blacksection {
@@ -252,7 +248,6 @@ export default function ExecutiveSeacrh() {
               background-size: 100%;
               height: 966px;
               object-fit: cover;
-              z-index: -1;
             }
             .ex-search {
               margin-top: -30%;
@@ -295,11 +290,11 @@ export default function ExecutiveSeacrh() {
               padding-bottom: 5%;
             }
             .white-section {
-              border: 1px solid black;
               width: 90%;
               padding-left: 13%;
               margin-top: 2%;
               background-color: #ffffff;
+              position: relative;
             }
             .white-section-row1 {
               margin-top: 5%;

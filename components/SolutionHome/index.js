@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "../Layout/Header/NavBar/NavBar";
+import NavBar from "../Layout/Header/NavBar";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -106,7 +106,7 @@ export default function SolutionHome({ doSomething }) {
           <input type="image" src="/images/chatbot.svg" />
         </div>
 
-        <Link href="/footer">
+        <Link href="/locationHome">
           <div>
             <button onClick={doSomething}>SCROLL</button>
             <input type="image" src="/images/scrollimg.svg"></input>

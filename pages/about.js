@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import NavBar from "../components/Layout/Header/NavBar/NavBar";
-import Copywritefooter from "../components/Layout/Footer/Copywritefooter";
-import Footer from "../components/Layout/Footer/Footer";
-import OurClient from "../components/OurClient/OurClient";
+import Footer from "../components/Layout/Footer";
+import OurClient from "../components/OurClient";
 import LocationMap from "../components/LocationMap";
 import AboutBlueComponent from "../components/AboutBlueComponent";
-import Image from "next/image";
+import NavBar from "../components/Layout/Header/NavBar";
 
 export default function about() {
   const [active, setActive] = useState("FirstCard");
@@ -103,9 +101,7 @@ export default function about() {
       </div>
 
       <div className="row">
-        <div className="col">
-          <Copywritefooter />
-        </div>
+        <div className="col"></div>
       </div>
       <style jsx>
         {`

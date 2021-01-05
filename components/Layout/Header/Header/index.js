@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import NavBar from "../NavBar/NavBar";
+import NavBar from "../NavBar/index";
 
 export default function Header({ doSomething }) {
   return (
     <>
-      <div className="row" id="mainhome">
-        <div className="col header">
-          <NavBar id={"#mainhome"} />
+      <div className="row no-gutters">
+        <div className="col no-gutters header">
+          <NavBar />
           <div className="row text-banner-section">
             <div
               className=" col-6 textbox-1 "

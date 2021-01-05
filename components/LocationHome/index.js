@@ -1,6 +1,7 @@
 import React from "react";
-import NavBar from "../Layout/Header/NavBar/NavBar";
+import NavBar from "../Layout/Header/NavBar";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function index({ doSomething }) {
   return (
@@ -75,16 +76,17 @@ export default function index({ doSomething }) {
             </div>
           </div>
         </div>
-
-        <div className="button">
-          <button onClick={doSomething}>SCROLL</button>
-          <Image
-            src="/images/scrolling.svg"
-            layout="fixed"
-            height={50}
-            width={30}
-          />
-        </div>
+        <Link href="/footer">
+          <div className="button">
+            <button onClick={doSomething}>SCROLL</button>
+            <Image
+              src="/images/scrolling.svg"
+              layout="fixed"
+              height={50}
+              width={30}
+            />
+          </div>
+        </Link>
       </div>
       <style jsx>
         {`
