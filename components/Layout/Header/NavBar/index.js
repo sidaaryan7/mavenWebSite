@@ -3,9 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function NavBar(props) {
-  console.log(props);
   return (
-    <div className="container-fluid ">
+    <div className="">
       <div className="row">
         <div className="col-4 d-flex justify-content-center">
           <a className="logo">
@@ -120,7 +119,7 @@ export default function NavBar(props) {
                 </Link>
               </li>
               <li>
-                <Link href="/thoughtLeadership">
+                <Link href="/thoughtleadership">
                   <a>THOUGHT LEADERSHIP</a>
                 </Link>
               </li>
@@ -147,7 +146,7 @@ export default function NavBar(props) {
             clear: both;
             display: block;
           }
-        }
+        
         .nav-area > ul > li {
           float: left;
           position: relative;
@@ -195,7 +194,11 @@ export default function NavBar(props) {
         .logo {
           padding-top: 4%;
         }
-
+         {
+           {
+            /* for showing drop downs when hover over the main menu */
+          }
+        }
         .nav-area ul li:hover > ul {
           display: block;
         }
@@ -203,8 +206,17 @@ export default function NavBar(props) {
         .nav-area ul li a:hover,
         .nav-area ul li a:active {
           border-bottom: solid 3px red;
+          color:#ff6139;
+          
         }
       `}</style>
+      <style jsx global>
+        {`
+        {
+          .row {
+     --bs-gutter-x: 0; 
+    --bs-gutter-y: 0;}`}
+      </style>
     </div>
   );
 }

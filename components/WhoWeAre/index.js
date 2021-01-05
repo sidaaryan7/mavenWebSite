@@ -3,12 +3,13 @@ import NavBar from "../Layout/Header/NavBar";
 import Image from "next/image";
 import Link from "next/link";
 
+const imgSrc = require("/home/maven/aaa/public/images/Logo.png");
 export default function WhoWeAre({ doSomething }) {
   return (
     <>
       <div className="row">
         <div className="col header">
-          <NavBar />
+          <NavBar color={"white"} logosrc={imgSrc} />
         </div>
         <div className="row text-section">
           <div className="col-8">

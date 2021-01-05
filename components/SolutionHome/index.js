@@ -3,12 +3,14 @@ import NavBar from "../Layout/Header/NavBar";
 import Image from "next/image";
 import Link from "next/link";
 
+const imgSrc = require("/home/maven/aaa/public/images/Logo.png");
+
 export default function SolutionHome({ doSomething }) {
   return (
     <>
       <div className="row">
         <div className="col header">
-          <NavBar />
+          <NavBar color={"white"} logosrc={imgSrc} />
         </div>
         <div className="row header-text">
           <div className="col-8">
@@ -106,7 +108,7 @@ export default function SolutionHome({ doSomething }) {
           <input type="image" src="/images/chatbot.svg" />
         </div>
 
-        <Link href="/locationHome">
+        <Link href="/ourclients">
           <div>
             <button onClick={doSomething}>SCROLL</button>
             <input type="image" src="/images/scrollimg.svg"></input>

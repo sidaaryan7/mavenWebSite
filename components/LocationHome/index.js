@@ -3,12 +3,14 @@ import NavBar from "../Layout/Header/NavBar";
 import Image from "next/image";
 import Link from "next/link";
 
+const imgSrc = require("/home/maven/aaa/public/images/Logo.png");
+
 export default function index({ doSomething }) {
   return (
     <>
       <div className="main">
         <div className="nav">
-          <NavBar />
+          <NavBar color={"white"} logosrc={imgSrc} />
         </div>
         <div className="content">
           <div className="content1">
@@ -91,6 +93,9 @@ export default function index({ doSomething }) {
       <style jsx>
         {`
            {
+            .nav{
+              display:grid;
+            }
             p {
               color: white;
             }

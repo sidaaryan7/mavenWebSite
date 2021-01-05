@@ -7,12 +7,13 @@ import NavBar from "../components/Layout/Header/NavBar";
 import Image from "next/image";
 import LocationMap from "../components/LocationMap";
 
+const imgSrc = require("/home/maven/aaa/public/images/Logo.png");
 export default function contact() {
   return (
     <div className="">
       <div className="row header">
         <div className="col">
-          <NavBar />
+          <NavBar color={"white"} logosrc={imgSrc} />
           <div className="textbox-1">
             <p className="textbox-1-p-1">Contact Us </p>
             <p className="textbox-1-p-2">Don’t be shy, Say Hi.</p>

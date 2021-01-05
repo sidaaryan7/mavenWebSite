@@ -3,12 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import NavBar from "../NavBar/index";
 
+const imgSrc = require("/home/maven/aaa/public/images/Logo.png");
+
 export default function Header({ doSomething }) {
   return (
     <>
-      <div className="row no-gutters">
-        <div className="col no-gutters header">
-          <NavBar />
+      <div className="row">
+        <div className="col-12 header">
+          <NavBar color={"white"} logosrc={imgSrc} />
           <div className="row text-banner-section">
             <div
               className=" col-6 textbox-1 "

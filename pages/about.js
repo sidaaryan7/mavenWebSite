@@ -5,13 +5,15 @@ import LocationMap from "../components/LocationMap";
 import AboutBlueComponent from "../components/AboutBlueComponent";
 import NavBar from "../components/Layout/Header/NavBar";
 
+const imgSrc = require("/home/maven/aaa/public/images/Logo.png");
+
 export default function about() {
   const [active, setActive] = useState("FirstCard");
   return (
     <div className="">
       <div className="row about-header">
         <div className="col">
-          <NavBar />
+          <NavBar color={"white"} logosrc={imgSrc} />
         </div>
         <div className="textbox-1">
           <p className="p1">about us</p>

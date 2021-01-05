@@ -2,16 +2,17 @@ import React from "react";
 import NavBar from "../../components/Layout/Header/NavBar";
 
 import Footer from "../../components/Layout/Footer";
-import Copywritefooter from "../../components/Layout/Footer/Copywritefooter";
+
 import ContactForm from "../../components/ContactForm/";
 import Image from "next/image";
 
+const imgSrc = require("/home/maven/aaa/public/images/Logo.png");
 export default function ExecutiveSeacrh() {
   return (
     <>
       <div className="row">
         <div className="col header">
-          <NavBar />
+          <NavBar color={"white"} logosrc={imgSrc} />
         </div>
       </div>
       <div className="row ex-search">
