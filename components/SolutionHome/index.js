@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../Layout/Header/NavBar";
-import Image from "next/image";
+
 import Link from "next/link";
 
 const imgSrc = require("/home/maven/aaa/public/images/Logo.png");
@@ -27,65 +27,39 @@ export default function SolutionHome({ doSomething }) {
             </div>
 
             <div className="row header-icon">
-              <div className="col">
-                <Image
-                  src="/images/Group20370.svg"
-                  Layout="fix"
-                  width={50}
-                  height={50}
-                ></Image>
+              <div className="col header-icon-1">
+                <img src="/images/Group20370.svg" width={50} height={50}></img>
               </div>
-              <div className="col">
-                <Image
-                  src="/images/Group20374.svg"
-                  Layout="fix"
-                  width={45}
-                  height={47}
-                ></Image>
+              <div className="col header-icon-2">
+                <img src="/images/Group20374.svg" width={45} height={47}></img>
               </div>
-              <div className="col">
-                <Image
-                  src="/images/Group20372.svg
-                "
-                  Layout="fix"
-                  width={53}
-                  height={37}
-                ></Image>
+              <div className="col header-icon-3">
+                <img src="/images/Group20372.svg" width={53} height={37}></img>
               </div>
-              <div className="col">
-                <Image
-                  src="/images/Group20373.svg"
-                  Layout="fix"
-                  width={51}
-                  height={48}
-                ></Image>
+              <div className="col header-icon-4">
+                <img src="/images/Group20373.svg" width={51} height={48}></img>
               </div>
-              <div className="col">
-                <Image
-                  src="/images/Group20375.svg"
-                  Layout="fix"
-                  width={53}
-                  height={48}
-                ></Image>
+              <div className="col header-icon-5">
+                <img src="/images/Group20375.svg" width={53} height={48}></img>
               </div>
             </div>
 
             <div className="row header-icontext">
-              <div className="col">
+              <div className="col header-icontext-1">
                 <p className="header-icon-common">PROFESSIONAL SEARCH</p>
               </div>
-              <div className="col">
+              <div className="col header-icontext-2">
                 <p className="header-icon-common">EXECUTIVE SEARCH</p>
               </div>
-              <div className="col">
+              <div className="col header-icontext-3">
                 <p className="header-icon-common">IT STAFF AUGMENTATION</p>
               </div>
-              <div className="col">
+              <div className="col header-icontext-4">
                 <p className="header-icon-common">
                   RECRUITMENT PROCESS OUTSOURCINg
                 </p>
               </div>
-              <div className="col">
+              <div className="col header-icontext-5">
                 <p className="header-icon-common">Flexi Staffing</p>
               </div>
             </div>
@@ -93,27 +67,22 @@ export default function SolutionHome({ doSomething }) {
 
           <div className="col-4">
             <div class="header-side-img">
-              <Image
-                src="/images/AboutSol.jpg
-                "
-                layout="fixed"
-                width={557}
-                height={557}
-              ></Image>
+              <img src="/images/AboutSol.jpg" width={557} height={557}></img>
             </div>
           </div>
         </div>
+
+        <Link href="/ourclients">
+          <div>
+            <p className="scroll">scroll</p>
+            <img className="scrollicon" src="/images/scrolling.svg"></img>
+          </div>
+        </Link>
 
         <div className="chatbox">
           <input type="image" src="/images/chatbot.svg" />
         </div>
 
-        <Link href="/ourclients">
-          <div>
-            <button onClick={doSomething}>SCROLL</button>
-            <input type="image" src="/images/scrollimg.svg"></input>
-          </div>
-        </Link>
         <style jsx>
           {`
              {
@@ -133,7 +102,7 @@ export default function SolutionHome({ doSomething }) {
                 margin-top: 8%;
               }
               .header-icontext {
-                padding-left: 15%;
+                padding-left: 22%;
               }
               .header-text {
                 margin-top: -40%;
@@ -203,6 +172,76 @@ export default function SolutionHome({ doSomething }) {
                 text-align: center;
                 color: #ffffff;
                 padding-top: 15%;
+              }
+
+              .header-icon-1 img {
+                margin-left: 13%;
+              }
+
+              .header-icon-2 img {
+                margin-left: 3%;
+              }
+
+              .header-icon-3 img {
+                margin-left: 26%;
+              }
+
+              .header-icon-4 img {
+                margin-left: 9%;
+              }
+
+              .header-icontext-1 p {
+                width: 72px;
+                height: 34px;
+                margin: 11.1px 0 0;
+              }
+
+              .header-icontext-2 p {
+                width: 56px;
+                height: 34px;
+                margin: 12px 0 0;
+              }
+
+              .header-icontext-3 p {
+                width: 82px;
+                height: 34px;
+                margin: 12px 1px 43px 64px;
+              }
+
+              .header-icontext-4 p {
+                width: 120px;
+                height: 34px;
+                margin: 12px 45px 43px 32px;
+              }
+
+              .header-icontext-5 p {
+                width: 46px;
+                height: 34px;
+                margin: 12px 151.6px 43px 49px;
+              }
+              .scroll {
+                display: inline;
+                width: 54px;
+                height: 15px;
+                margin: 0 6.5px 0 0;
+                font-family: Poppins;
+                font-size: 10px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 5.4;
+                letter-spacing: 3.3px;
+                text-align: center;
+                color: #ffffff;
+                position: relative;
+                bottom: 196%;
+                padding: 0 0 0 3%;
+              }
+
+              .scrollicon {
+                display: inline;
+                position: relative;
+                bottom: 195%;
               }
             }
           `}

@@ -17,7 +17,7 @@ export default function ourclients() {
       <div className="last-row">
         <Link href="/locationHome">
           <div className="scroll">
-            <button>scroll</button>
+            <p style={{ display: "inline" }}> scroll</p>
             <img src="/images/scrolling.svg"></img>
           </div>
         </Link>
@@ -36,7 +36,7 @@ export default function ourclients() {
            {
             .main {
               display: grid;
-              grid-template-rows: 20% 70% 10%;
+              grid-template-rows: 50% 70% 10%;
               grid-template-columns: 100%;
             }
 
@@ -63,6 +63,19 @@ export default function ourclients() {
               position: absolute;
               top: 493px;
               right: 1759px;
+            }
+            .scroll p {
+              font-family: Poppins;
+              font-size: 10px;
+              font-weight: 500;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 5.4;
+              letter-spacing: 3.3px;
+              text-align: center;
+              color: #000000;
+            }
+            .scroll img {
             }
           }
         `}

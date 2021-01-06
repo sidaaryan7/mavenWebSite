@@ -80,7 +80,7 @@ export default function index({ doSomething }) {
         </div>
         <Link href="/footer">
           <div className="button">
-            <button onClick={doSomething}>SCROLL</button>
+            <p>SCROLL</p>
             <Image
               src="/images/scrolling.svg"
               layout="fixed"
@@ -116,6 +116,7 @@ export default function index({ doSomething }) {
               display: grid;
               grid-template-rows: 100%;
               grid-template-columns: 50% 50%;
+              padding-top:4%;
             }
 
             .content1{
@@ -187,7 +188,7 @@ export default function index({ doSomething }) {
 
             .content2-text-p2-common{
               
-              width:26%;
+              width:31%;
               opacity: 0.8;
               font-family: Roboto;
               font-size: 13px;
@@ -209,7 +210,7 @@ export default function index({ doSomething }) {
 
 
             }
-            button{
+           .button p{
               font-family: Poppins;
               font-size: 10px;
               font-weight: 500;

@@ -87,6 +87,13 @@ export default function about() {
 
       <div className="row">
         <div className="col">
+          <div>
+            <p className="ourclient-text">our client</p>
+          </div>
+        </div>
+      </div>
+      <div className="row ourclient">
+        <div className="col">
           <OurClient />
         </div>
       </div>
@@ -97,7 +104,7 @@ export default function about() {
         </div>
       </div>
       <div className="row">
-        <div className="col">
+        <div className="col footer">
           <Footer />
         </div>
       </div>
@@ -126,6 +133,13 @@ export default function about() {
               height: 966px;
               object-fit: cover;
             }
+
+            .textbox-1{
+              padding-left: 10%;
+              padding-left: 10%;
+    margin-bottom: -93px;
+}
+            }
             .textbox-1 p{
               color: #ffffff;
               margin-left: 4%;
@@ -143,7 +157,7 @@ export default function about() {
               color: #ffffff;
             }
             .p2 {
-              width: 68%;
+              width: 75%;
 
               padding: 0 648px 260px 5px;
               font-family: Poppins;
@@ -155,6 +169,7 @@ export default function about() {
               letter-spacing: normal;
               text-align: left;
               color: #ffffff;
+              padding-bottom:0;
             }
             .textbox-2 {
               background-color: #ff6139;
@@ -166,6 +181,7 @@ export default function about() {
               width: 51%;
               position: relative;
               top: -63px;
+              margin-bottom: -62px;
             }
             .textbox-2 p {
               padding-left: 10%;
@@ -193,6 +209,25 @@ export default function about() {
               border: none;
               text-transform: capitalize;
 }
+            }
+
+            .ourclient{
+              padding-bottom: 4%;
+            }
+            .ourclient-text{
+              padding-left: 17%;
+              padding-top: 5%;
+              padding-bottom: 3%;ont-family: Poppins;
+              font-size: 16px;
+              font-weight: 500;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.19;
+              letter-spacing: normal;
+              color: #202940;
+            }
+            .footer{
+              position:relative;
             }
           }
         `}

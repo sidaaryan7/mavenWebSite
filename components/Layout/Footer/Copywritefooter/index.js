@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Copywritefooter() {
   return (
     <div className="cfooter">
-      <div>
+      <div className="copywrite-text">
         <p>COPYWRITE &copy; 2008-2020 MAVEN WORKFORCE LIMITED</p>
       </div>
 
@@ -48,9 +48,11 @@ export default function Copywritefooter() {
             letter-spacing: 2.2px;
             text-align: left;
             color: #ffffff;
+            padding-top: 1.5%;
           }
           .socialicon {
             margin-left: 80%;
+            padding-top: 1%;
           }
         `}
       </style>

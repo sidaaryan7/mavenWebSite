@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AboutBlueComponent({ title, content }) {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid main">
       <div className="row">
         <div className="col d-flex justify-content-left">
           <p className="title">{title}</p>
@@ -16,6 +16,13 @@ export default function AboutBlueComponent({ title, content }) {
       <style jsx>
         {`
            {
+            
+            .main{
+              padding-left: 19%;
+}
+
+
+            }
             p {
               color: white;
             }

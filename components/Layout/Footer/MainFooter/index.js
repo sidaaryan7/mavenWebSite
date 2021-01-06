@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="container">
+    <div className="container main">
       <div className="row footer-r">
         <div className="col">
           <div className="row icon">
@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="text3">
             <p className="text3-1">Start a conversation</p>
             <p className="text3-2">Contact us</p>
-            <input type="image" src=""></input>
+            <input type="image" src="/images/orangearrowRight.svg"></input>
           </div>
         </div>
 
@@ -130,14 +130,27 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
-              <h6>view more</h6>
+              <h6>
+                view more
+                <input type="image" src="/images/orangearrowRight.svg"></input>
+              </h6>
             </div>
           </div>
         </div>
+        <div className="goup">
+          <img src="/images/blackArrowup.svg" />
+          <p>Go Up</p>
+        </div>
       </div>
+
       <style jsx>
         {`
            {
+            
+            .main{
+              margin-bottom: 0.5%;
+            }
+            
             .text2 {
               font-size: 77px;
               align: left;
@@ -166,6 +179,7 @@ export default function Footer() {
   margin-bottom: 7%;
 }
 .text3-2{
+  display:inline;
   width: 88px;
   height: 30px;
   margin: 0 16.7px 0 0;
@@ -198,7 +212,7 @@ ul{
 
 }
 h6{
-  width: 100px;
+  width: 200px;
   height: 17px;
   margin: 0 15.5px 0 0;
   font-family: Poppins;
@@ -211,11 +225,34 @@ h6{
   text-align: left;
   color: #000000;
 }
+h6 input{
+  margin-left: 10%;
+}
 .icon{
   padding-bottom: 9%;
 }
 h6{
   padding-top: 10%;
+}
+
+.goup{
+  position: absolute;
+    left: 94%;
+    width: 100px;
+    top: 770px;
+    height: 100px;
+}
+
+.goup p{
+  font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    /* text-align: center; */
+    color: #ff6139;
 }
             }
           }

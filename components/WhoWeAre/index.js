@@ -125,8 +125,8 @@ export default function WhoWeAre({ doSomething }) {
         </div>
         <Link href="/oursolutionsHome">
           <div className="scroll">
-            <button onClick={doSomething}>SCROLL</button>
-            <input type="image" src="/images/scrollimg.svg"></input>
+            <p>SCROLL</p>
+            <input type="image" src="/images/scrolling.svg"></input>
           </div>
         </Link>
         <style jsx>
@@ -266,16 +266,32 @@ export default function WhoWeAre({ doSomething }) {
             }
             .scroll{
               margin: 360px 20px 21px 24.5px;
-    padding: 11px;
-    position: absolute;
-    top: 493px;
-    left: 0%;
+              padding: 11px;
+              position: absolute;
+              top: 493px;
+              left: 0%;
             }
-            .scroll button{
-              border:none;
-              
-  
+
+            .scroll p{
+              display: inline;
+              width: 54px;
+              height: 15px;
+              font-family: Poppins;
+              font-size: 10px;
+              font-weight: 500;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 5.4;
+              letter-spacing: 3.3px;
+              text-align: center;
+              color: #ffffff;
+}
             }
+
+            .scroll input{
+              margin-left: 0.5%;
+            }
+            
           `}
         </style>
       </div>
