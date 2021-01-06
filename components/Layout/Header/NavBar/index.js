@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function NavBar(props) {
   return (
     <div className="">
-      <div className="row">
-        <div className="col-4 d-flex justify-content-center">
+      <div className="row main">
+        <div className="col-4 d-flex justify-content-center logo-wrapper">
           <a className="logo">
             {
               <Link href="/mainHome">
@@ -25,9 +25,9 @@ export default function NavBar(props) {
             }
           </a>
         </div>
-        <div className="col-8 d-flex  justify-content-center">
+        <div className="nav-link-wrapper col-8 ">
           <nav className="nav-area">
-            <ul>
+            <ul className="firstul">
               <li>
                 <Link href="/">
                   <a>HOME</a>
@@ -209,7 +209,64 @@ export default function NavBar(props) {
           color:#ff6139;
           
         }
+
+{{/*RESPONSIVE CSS   */}}
+
+@media only screen and (min-width : 1806px) and (max-width : 1855px) {
+/* Styles */
+
+  .firstul{
+           padding-left: 0%;
+        }
+
+
+
+}
+
+
+@media only screen and (min-width :1754px ) and (max-width : 1806px) {
+/* Styles */
+
+.firstul{
+  padding-left: 0%;
+}
+
+.firstul li{
+  margin-left:0
+}
+}
+
+@media only screen and (min-width :1645px ) and (max-width : 1754px) {
+/* Styles */
+
+.firstul{
+  padding-left: 0;
+    margin-left: -97px;
+}
+
+}
+
+
+@media only screen and (min-width : 1598px) and (max-width : 1645px) {
+/* Styles */
+
+.firstul{
+  padding-left: 0px;
+    margin-left: -13%;
+}
+.logo{
+  padding-top: 4%;
+    margin-left: -20%;
+}
+
+
+}
+
+
+
+
       `}</style>
+
       <style jsx global>
         {`
         {
