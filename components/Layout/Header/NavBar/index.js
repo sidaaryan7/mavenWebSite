@@ -30,7 +30,9 @@ export default function NavBar(props) {
             <ul className="firstul">
               <li>
                 <Link href="/">
-                  <a>HOME</a>
+                  <a>
+                    HOME <span class="fancy-line"></span>
+                  </a>
                 </Link>
               </li>
               <li>
@@ -114,7 +116,7 @@ export default function NavBar(props) {
                 </ul>
               </li>
               <li>
-                <Link href="">
+                <Link href="/jobs">
                   <a>JOBS</a>
                 </Link>
               </li>
@@ -146,133 +148,157 @@ export default function NavBar(props) {
             clear: both;
             display: block;
           }
-        
-        .nav-area > ul > li {
-          float: left;
-          position: relative;
-        }
-        .nav-area ul ul li {
-          margin: 5%;
-        }
-        .nav-area ul ul {
-          position: absolute;
-          padding: 0;
-          /*min-width:160px;*/
-          width: 300px;
-          height: 500px;
-          display: none;
-          top: 100%;
-          left: 0;
-          background-color: white;
-        }
-        .nav-area ul ul a {
-          color: black;
-        }
-        ul {
-          float: left;
 
-          list-style: none;
-        }
-        a {
-          color: ${props.color};
+          .nav-area > ul > li {
+            float: left;
+            position: relative;
+          }
+          .nav-area ul ul li {
+            margin: 5%;
+          }
+          .nav-area ul ul {
+            position: absolute;
+            padding: 0;
+            /*min-width:160px;*/
+            width: 300px;
+            height: 500px;
+            display: none;
+            top: 100%;
+            left: 0;
+            background-color: white;
+          }
+          .nav-area ul ul a {
+            color: black;
+          }
+          ul {
+            float: left;
 
-          text-transform: capitalize;
-        }
-        li {
-          float: left;
-          margin: 30px;
-          font-family: Roboto;
-          font-size: 15px;
-          font-weight: 500;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: 2.3;
-          letter-spacing: 2.7px;
-          text-align: left;
-          color: #ffffff;
-        }
-        .logo {
-          padding-top: 4%;
-        }
-         {
+            list-style: none;
+          }
+          a {
+            color: ${props.color};
+
+            text-transform: capitalize;
+          }
+          li {
+            float: left;
+            margin: 30px;
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2.3;
+            letter-spacing: 2.7px;
+            text-align: left;
+            color: #ffffff;
+          }
+          .logo {
+            padding-top: 4%;
+          }
            {
-            /* for showing drop downs when hover over the main menu */
+             {
+              /* for showing drop downs when hover over the main menu */
+            }
+          }
+          .nav-area ul li:hover > ul {
+            display: block;
+          }
+
+          .nav-area ul li a:hover,
+          .nav-area ul li a:active {
+            border-bottom: solid 3px #ff6139;
+            color: #ff6139;
+            transition: border-width 0.6s;
+          }
+
+           {
+             {
+              /*RESPONSIVE CSS   */
+            }
+          }
+
+          @media only screen and (min-width: 1806px) and (max-width: 1855px) {
+            /* Styles */
+
+            .firstul {
+              padding-left: 0%;
+            }
+          }
+
+          @media only screen and (min-width: 1754px) and (max-width: 1806px) {
+            /* Styles */
+
+            .firstul {
+              padding-left: 0%;
+            }
+
+            .firstul li {
+              margin-left: 0;
+            }
+          }
+
+          @media only screen and (min-width: 1645px) and (max-width: 1754px) {
+            /* Styles */
+
+            .firstul {
+              padding-left: 0;
+              margin-left: -97px;
+            }
+          }
+
+          @media only screen and (min-width: 1598px) and (max-width: 1645px) {
+            /* Styles */
+
+            .firstul {
+              padding-left: 0px;
+              margin-left: -13%;
+            }
+            .logo {
+              padding-top: 4%;
+              margin-left: -20%;
+            }
+          }
+
+          @media only screen and (min-width: 1420px) and (max-width: 1597px) {
+            /* Styles */
+
+            .firstul {
+              margin-left: -27%;
+            }
+            .logo-wrapper a {
+              margin-left: -43%;
+            }
+          }
+
+          @media only screen and (min-width: 1398px) and (max-width: 1420px) {
+            /* Styles */
+
+            .firstul {
+              margin-left: -29%;
+            }
+            .logo-wrapper a {
+              margin-left: -40%;
+            }
           }
         }
-        .nav-area ul li:hover > ul {
-          display: block;
-        }
-
-        .nav-area ul li a:hover,
-        .nav-area ul li a:active {
-          border-bottom: solid 3px red;
-          color:#ff6139;
-          
-        }
-
-{{/*RESPONSIVE CSS   */}}
-
-@media only screen and (min-width : 1806px) and (max-width : 1855px) {
-/* Styles */
-
-  .firstul{
-           padding-left: 0%;
-        }
-
-
-
-}
-
-
-@media only screen and (min-width :1754px ) and (max-width : 1806px) {
-/* Styles */
-
-.firstul{
-  padding-left: 0%;
-}
-
-.firstul li{
-  margin-left:0
-}
-}
-
-@media only screen and (min-width :1645px ) and (max-width : 1754px) {
-/* Styles */
-
-.firstul{
-  padding-left: 0;
-    margin-left: -97px;
-}
-
-}
-
-
-@media only screen and (min-width : 1598px) and (max-width : 1645px) {
-/* Styles */
-
-.firstul{
-  padding-left: 0px;
-    margin-left: -13%;
-}
-.logo{
-  padding-top: 4%;
-    margin-left: -20%;
-}
-
-
-}
-
-
-
-
       `}</style>
 
       <style jsx global>
         {`
         {
+
+
+          @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
           .row {
      --bs-gutter-x: 0; 
-    --bs-gutter-y: 0;}`}
+    --bs-gutter-y: 0;}
+    
+    
+    
+    `}
       </style>
     </div>
   );

@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,7 +6,13 @@ import NavBar from "../NavBar/index";
 
 const imgSrc = require("/home/maven/aaa/public/images/Logo.png");
 
+const DynamicComponentWithNoSSR = dynamic(
+  () => import("../../../ChatBot/index"),
+  { ssr: false }
+);
+
 export default function Header({ doSomething }) {
+  const [active, setActive] = useState("firstcard");
   return (
     <>
       <div className="row">
@@ -37,18 +44,29 @@ export default function Header({ doSomething }) {
                 ></Image>
               </div>
             </div>
-            <Link href="/whoweareHome">
-              <div className="col-3" style={{ background: "#ffffff" }}>
-                <p className="textbox-2-p1">Scroll to discover</p>
-                <div className="blackarrow">
-                  <input
-                    type="image"
-                    src="/images/blackarrow.svg"
-                    onClick={doSomething}
-                  />
+
+            {active == "firstcard" ? (
+              <Link href="/whoweareHome">
+                <div className="col-3" style={{ background: "#ffffff" }}>
+                  <p className="textbox-2-p1">Scroll to discover</p>
+                  <div className="blackarrow">
+                    <input
+                      type="image"
+                      src="/images/blackarrow.svg"
+                      onClick={
+                        (doSomething = () => {
+                          console.log("hello");
+                        })
+                      }
+                    />
+                  </div>
                 </div>
+              </Link>
+            ) : (
+              <div className="col-3" style={{ background: "#ffffff" }}>
+                <DynamicComponentWithNoSSR />
               </div>
-            </Link>
+            )}
           </div>
         </div>
         <div
@@ -61,6 +79,9 @@ export default function Header({ doSomething }) {
             position: "absolute",
             top: "493px",
             left: "1759px",
+          }}
+          onClick={() => {
+            setActive("secondcard");
           }}
         >
           <Image
@@ -154,6 +175,7 @@ export default function Header({ doSomething }) {
               position: relative;
               left: 43%;
               top: 19%;
+              font-family: "POPPINS";
             }
             .whitearrow {
               position: relative;
