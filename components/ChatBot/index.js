@@ -3,7 +3,16 @@ import React from "react";
 export default function ChatBot() {
   return (
     <div>
-      <h1>chatbot</h1>
+      <div className="maindiv">
+        <div className="header"></div>
+        <div className="chat"></div>
+        <div className="">
+          <p>Looking for job</p>
+        </div>
+        <div className="">
+          <p>Looking for job</p>
+        </div>
+      </div>
     </div>
   );
 }
