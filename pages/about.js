@@ -159,7 +159,7 @@ export default function about() {
             .p2 {
               width: 75%;
 
-              padding: 0 648px 260px 5px;
+              padding: 0 573px 260px 5px;
               font-family: Poppins;
               font-size: 104px;
               font-weight: 500;
@@ -184,7 +184,7 @@ export default function about() {
               margin-bottom: -62px;
             }
             .textbox-2 p {
-              padding-left: 10%;
+              padding-left: 27%;
               padding-top: 5%;
               padding-bottom: 5%;
               padding-right: 5%;
@@ -203,7 +203,7 @@ export default function about() {
               color:white;
             }
             .headerButton{
-              margin-left: 10%;
+              margin-left: 26%;
               background: #ff6139;
               color: white;
               border: none;

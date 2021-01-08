@@ -47,7 +47,7 @@ export default function contact() {
         </div>
       </div>
       <div className="row ">
-        <div className="col-12">
+        <div className="col-12 footerrow">
           <Footer />
         </div>
       </div>
@@ -139,6 +139,10 @@ export default function contact() {
           }
           .main{
             margin:0px;
+          }
+
+          .footerrow{
+            position:relative;
           }
         `}
       </style>

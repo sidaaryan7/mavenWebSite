@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import $ from "jquery";
 
 export default function NavBar(props) {
+  useEffect(() => {});
+
   return (
     <div className="">
+      {/*  row start */}
       <div className="row main">
+        {/*Logo section */}
+
         <div className="col-4 d-flex justify-content-center logo-wrapper">
           <a className="logo">
             {
@@ -25,6 +31,7 @@ export default function NavBar(props) {
             }
           </a>
         </div>
+        {/*navbar link sections */}
         <div className="nav-link-wrapper col-8 ">
           <nav className="nav-area">
             <ul className="firstul">
@@ -45,6 +52,8 @@ export default function NavBar(props) {
                 <Link href="">
                   <a>SOLUTIONS</a>
                 </Link>
+
+                {/*drop down menu items */}
                 <ul>
                   <li>
                     <Link href="/solutions/ExecutiveSearch">
@@ -72,11 +81,13 @@ export default function NavBar(props) {
                     </Link>
                   </li>
                 </ul>
+                {/* drop down ends*/}
               </li>
               <li>
                 <Link href="">
                   <a>iNDUSTRY FOCUS</a>
                 </Link>
+                {/*drop down starts */}
                 <ul>
                   <li>
                     <Link href="">
@@ -114,6 +125,7 @@ export default function NavBar(props) {
                     </Link>
                   </li>
                 </ul>
+                {/*drop down ends */}
               </li>
               <li>
                 <Link href="/jobs">
@@ -134,13 +146,7 @@ export default function NavBar(props) {
           </nav>
         </div>
       </div>
-      {/*navbar*/}
-      <nav className="navbar">
-        {/*navlogo image*/}
-        <div className="logowrapper"></div>
-        {/*navbar link*/}
-      </nav>
-
+      {/*  styling starts  */}
       <style jsx>{`
          {
           .nav-area:after {
@@ -209,7 +215,7 @@ export default function NavBar(props) {
           .nav-area ul li a:active {
             border-bottom: solid 3px #ff6139;
             color: #ff6139;
-            transition: border-width 0.6s;
+            animation: fadeIn ease 20s;
           }
 
            {

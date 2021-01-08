@@ -1,74 +1,40 @@
 import dynamic from "next/dynamic";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import NavBar from "../NavBar/index";
 
+import HomePageText from "../../../HomePageText/index";
+
 const imgSrc = require("/home/maven/aaa/public/images/Logo.png");
+{
+  /* importing chatbot component with no SSR */
+}
 
-const DynamicComponentWithNoSSR = dynamic(
-  () => import("../../../ChatBot/index"),
-  { ssr: false }
-);
-
-export default function Header({ doSomething }) {
+export default function Header() {
   const [active, setActive] = useState("firstcard");
+
+  {
+    /*  state for keeping track of white section and chatbot */
+  }
+
+  useEffect(() => {});
+
   return (
     <>
+      {/* row start */}
       <div className="row">
+        {/* Navbar section  */}
         <div className="col-12 header">
           <NavBar color={"white"} logosrc={imgSrc} />
-          <div className="row text-banner-section">
-            <div
-              className=" col-6 textbox-1 "
-              style={{ background: "#ff6139", "padding-left": "15%" }}
-            >
-              <p className="textbox-1-p1">EXPERTS SINCE 1997</p>
-              <p className="textbox-1-p2">
-                We Deliver a Meaningful HR EXPERIENCE.
-              </p>
-            </div>
-            <div className="col-3" style={{ background: "#ff6139" }}>
-              <p className="textbox-1-p3">
-                A passionate team of good people is working round the clock in
-                Making an indelible mark in the world of Staffing and Talent
-                Acquisition industry by providing efficient solutions.
-              </p>
-              <p className="textbox-1-p4">Know more</p>
-              <div className="whitearrow">
-                <Image
-                  src="/images/arrow.svg"
-                  layout="fixed"
-                  height={28}
-                  width={33}
-                ></Image>
-              </div>
-            </div>
 
-            {active == "firstcard" ? (
-              <Link href="/whoweareHome">
-                <div className="col-3" style={{ background: "#ffffff" }}>
-                  <p className="textbox-2-p1">Scroll to discover</p>
-                  <div className="blackarrow">
-                    <input
-                      type="image"
-                      src="/images/blackarrow.svg"
-                      onClick={
-                        (doSomething = () => {
-                          console.log("hello");
-                        })
-                      }
-                    />
-                  </div>
-                </div>
-              </Link>
-            ) : (
-              <div className="col-3" style={{ background: "#ffffff" }}>
-                <DynamicComponentWithNoSSR />
-              </div>
-            )}
+          {/*  orange & white text section  */}
+
+          <div className="text-banner-section">
+            <HomePageText state={active} />
           </div>
         </div>
+        {/*  chatbot button  */}
         <div
           className="chatbox"
           style={{
@@ -92,6 +58,8 @@ export default function Header({ doSomething }) {
           ></Image>
         </div>
       </div>
+
+      {/* row end */}
       <style jsx>
         {`
            {
@@ -110,7 +78,7 @@ export default function Header({ doSomething }) {
 
             .text-banner-section {
               width: 80%;
-              margin-top: 24%;
+              margin-top: 24.5%;
             }
             p {
               color: white;
@@ -202,7 +170,85 @@ export default function Header({ doSomething }) {
               top: 493px;
               left: 1759px;
             }
+            .react-chatbot-kit-chat-container {
+    
+              width: 379px;
           }
+
+
+{/* RESPONSIVE CSS */}
+
+@media screen 
+  and (min-width: 1560px) 
+  and (max-width: 1812px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .text-banner-section{
+      margin-top:30%;
+    }
+
+}
+
+@media screen 
+  and (min-width: 1529px) 
+  and (max-width: 1560px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .text-banner-section{
+      margin-top:31%;
+    }
+
+}
+
+@media screen 
+  and (min-width: 1497px) 
+  and (max-width: 1529px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .text-banner-section{
+      margin-top:31.5%;
+    }
+
+}
+
+@media screen 
+  and (min-width:1455px ) 
+  and (max-width: 1497px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .text-banner-section{
+      margin-top:32.5%;
+    }
+
+}
+
+@media screen 
+  and (min-width: 1421px) 
+  and (max-width: 1455px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .text-banner-section{
+      margin-top:33.5%;
+    }
+
+}
+
+@media screen 
+  and (min-width: 1398px) 
+  and (max-width: 1421px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .text-banner-section{
+      margin-top:34.5%;
+    }
+
+}
+
+@media screen 
+  and (min-width: 1371px) 
+  and (max-width: 1398px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .text-banner-section{
+      margin-top:27.5%;
+    }
+
+}
+
+
         `}
       </style>
     </>
