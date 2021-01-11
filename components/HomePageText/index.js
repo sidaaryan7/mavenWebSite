@@ -8,7 +8,7 @@ export default function HomePageText() {
   console.log(Hidden);
   return (
     <div>
-      <div className="row">
+      <div className="row orangeSection">
         {/* orange section coloum 1 */}
         <div
           className=" col-6 textbox-1 "
@@ -18,7 +18,10 @@ export default function HomePageText() {
           <p className="textbox-1-p2">We Deliver a Meaningful HR EXPERIENCE.</p>
         </div>
         {/*  orange section coloumn 2 */}
-        <div className="col-3" style={{ background: "#ff6139" }}>
+        <div
+          className="col-3 orangeSection-2"
+          style={{ background: "#ff6139" }}
+        >
           <p className="textbox-1-p3">
             A passionate team of good people is working round the clock in
             Making an indelible mark in the world of Staffing and Talent
@@ -37,15 +40,22 @@ export default function HomePageText() {
         {/* white section with scrollbutton and chatbot */}
 
         {Hidden == "false" ? (
-          <div className="col-3" style={{ background: "#ffffff" }}>
+          <div className="col-3 " style={{ background: "#ffffff" }}>
             <ChatBot sethidden={setHidden} />
           </div>
         ) : (
           <Link href="/whoweareHome">
-            <div className="col-3" style={{ background: "#ffffff" }}>
+            <div
+              className="col-3 scrollSection"
+              style={{ background: "#ffffff" }}
+            >
               <p className="textbox-2-p1">Scroll to discover</p>
               <div className="blackarrow">
-                <input type="image" src="/images/blackarrow.svg" />
+                <input
+                  type="image"
+                  src="/images/blackarrow.svg"
+                  onKeyUp={this.onKeyUpValue.bind(this)}
+                />
               </div>
             </div>
           </Link>
@@ -149,6 +159,32 @@ export default function HomePageText() {
             p {
               color: white;
               font-family: Roboto;
+            }
+
+             {
+              /*responsive csss */
+            }
+
+            @media only screen and (max-width: 500px) {
+              .scrollSection {
+                display: none;
+              }
+              .textbox-1 {
+                width: 100%;
+              }
+              .textbox-1-p1 {
+                width: 100%;
+              }
+              .textbox-1-p2 {
+                width: 100%;
+              }
+              .orangeSection {
+                position: relative;
+                left: 15%;
+              }
+              .orangeSection-2 {
+                width: 100%;
+              }
             }
           }
         `}
