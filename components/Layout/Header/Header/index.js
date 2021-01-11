@@ -6,14 +6,12 @@ import NavBar from "../NavBar/index";
 
 import HomePageText from "../../../HomePageText/index";
 
-const imgSrc = require("/home/maven/aaa/public/images/Logo.png");
 {
-  /* importing chatbot component with no SSR */
+  /* PROPS FOR NAVNBAR LOGO IMAGE*/
 }
+const imgSrc = require("/home/maven/aaa/public/images/Logo.png");
 
 export default function Header() {
-  const [active, setActive] = useState("firstcard");
-
   {
     /*  state for keeping track of white section and chatbot */
   }
@@ -31,31 +29,8 @@ export default function Header() {
           {/*  orange & white text section  */}
 
           <div className="text-banner-section">
-            <HomePageText state={active} />
+            <HomePageText />
           </div>
-        </div>
-        {/*  chatbot button  */}
-        <div
-          className="chatbox"
-          style={{
-            width: "78px",
-            height: "78px",
-            margin: "360px 20px 21px 24.5px",
-            padding: "11px",
-            position: "absolute",
-            top: "493px",
-            left: "1759px",
-          }}
-          onClick={() => {
-            setActive("secondcard");
-          }}
-        >
-          <Image
-            src="/images/chatbot.svg"
-            layout="fixed"
-            height={78}
-            width={78}
-          ></Image>
         </div>
       </div>
 

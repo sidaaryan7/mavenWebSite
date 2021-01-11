@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import ChatBot from "../ChatBot/index";
 
-export default function HomePageText(props) {
-  const [active] = useState(props);
-  console.log(active);
+export default function HomePageText() {
+  const [Hidden, setHidden] = useState(true);
+  console.log(Hidden);
   return (
     <div>
       <div className="row">
         {/* orange section coloum 1 */}
-
         <div
           className=" col-6 textbox-1 "
           style={{ background: "#ff6139", paddingLeft: "15%" }}
@@ -17,9 +17,7 @@ export default function HomePageText(props) {
           <p className="textbox-1-p1">EXPERTS SINCE 1997</p>
           <p className="textbox-1-p2">We Deliver a Meaningful HR EXPERIENCE.</p>
         </div>
-
         {/*  orange section coloumn 2 */}
-
         <div className="col-3" style={{ background: "#ff6139" }}>
           <p className="textbox-1-p3">
             A passionate team of good people is working round the clock in
@@ -36,10 +34,13 @@ export default function HomePageText(props) {
             ></Image>
           </div>
         </div>
-
         {/* white section with scrollbutton and chatbot */}
 
-        {active === "firstcard" ? (
+        {Hidden == "false" ? (
+          <div className="col-3" style={{ background: "#ffffff" }}>
+            <ChatBot sethidden={setHidden} />
+          </div>
+        ) : (
           <Link href="/whoweareHome">
             <div className="col-3" style={{ background: "#ffffff" }}>
               <p className="textbox-2-p1">Scroll to discover</p>
@@ -48,11 +49,31 @@ export default function HomePageText(props) {
               </div>
             </div>
           </Link>
-        ) : (
-          <div className="col-3" style={{ background: "#ffffff" }}>
-            <div></div>
-          </div>
         )}
+      </div>
+      {/*  chatbot button  */}
+      <div
+        className="chatbox"
+        style={{
+          width: "78px",
+          height: "78px",
+          margin: "360px 20px 21px 24.5px",
+          padding: "11px",
+          position: "absolute",
+          top: "493px",
+          left: "1759px",
+        }}
+        onClick={() => {
+          setHidden("false");
+          console.log(Hidden);
+        }}
+      >
+        <Image
+          src="/images/chatbot.svg"
+          layout="fixed"
+          height={78}
+          width={78}
+        ></Image>
       </div>
       <style jsx>
         {`
