@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 
 import Header from "../components/Layout/Header/Header";
 import SplashScreen from "../components/SplashScreen/index";
+import Media from "react-media";
+import WhoWeAre from "../components/WhoWeAre/index";
+import SolutionHome from "../components/SolutionHome/index";
+import OurClient from "../components/OurClient/index";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -12,5 +16,34 @@ export default function Home() {
     }, 3000);
   }, []);
 
-  return <>{loading ? <SplashScreen /> : <Header />}</>;
+  return (
+    <>
+      <Media
+        queries={{
+          small: "(max-width: 500px)",
+          medium: "(min-width: 600px) and (max-width: 1199px)",
+          large: "(min-width: 1200px)",
+        }}
+      >
+        {(matches) => (
+          <>
+            {matches.small && (
+              <>
+                <Header />
+                <WhoWeAre />
+                <SolutionHome />
+                <OurClient />
+              </>
+            )}
+            {matches.medium && <p>I am medium!</p>}
+            {matches.large && (
+              <>
+                <>{loading ? <SplashScreen /> : <Header />}</>;
+              </>
+            )}
+          </>
+        )}
+      </Media>
+    </>
+  );
 }
