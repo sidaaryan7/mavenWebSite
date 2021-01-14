@@ -5,17 +5,22 @@ import Link from "next/link";
 export default class NavBar extends Component {
   showingMenu = () => {
     var x = document.getElementById("myLinks");
+
     if (x.style.display === "block") {
       x.style.display = "none";
     } else {
       x.style.display = "block";
+      x.style.position = "absolute";
     }
   };
+
   myFunction = function (e) {
-    e.target.classList.toggle("change");
+    e.target.classNameList.toggle("change");
+
     this.showingMenu();
   };
 
+  componentDidMount() {}
   render() {
     return (
       <div className="">
@@ -42,230 +47,74 @@ export default class NavBar extends Component {
                     </div>
                     {/*nav links section */}
                     <div className="col-6">
-                      <div
-                        className="mobileMenu"
-                        onClick={(e) => this.myFunction(e)}
-                      >
-                        <div className="bar1"></div>
-                        <div className="bar2"></div>
-                        <div className="bar3"></div>
+                      <div className="toggle">
+                        <a href="#">
+                          <i className="fas fa-bars fa-2x"> </i>
+                        </a>
                       </div>
-
-                      <nav className="nav-area" id="myLinks">
-                        <ul className="firstul">
-                          <li>
-                            <Link href="/">
-                              <a>HOME</a>
-                            </Link>
+                      {/* *}
+                      <nav>
+                        <ul className="menu">
+                          <li className="item">
+                            <a href="#">Home</a>
                           </li>
-                          <li>
-                            <Link href="/about">
-                              <a>ABOUT US</a>
-                            </Link>
+                          <li className="item">
+                            <a href="#">About</a>
                           </li>
-
-                          <li>
-                            <Link href="">
-                              <a>SOLUTIONS</a>
-                            </Link>
-
-                            {/*drop down menu items */}
-                            <ul>
-                              <li>
-                                <Link href="/solutions/ExecutiveSearch">
-                                  <a>Executive Search</a>
-                                </Link>
+                          <li className="item has-submenu">
+                            <a tabindex="0">SOLUTIONS</a>
+                            <ul className="submenu">
+                              <li className="subitem">
+                                <a href="#">Executve search</a>
                               </li>
-                              <li>
-                                <Link href="">
-                                  <a>flexi Staffing</a>
-                                </Link>
+                              <li className="subitem">
+                                <a href="#">Flexi Staffing</a>
                               </li>
-                              <li>
-                                <Link href="">
-                                  <a>It Staff Augmentation</a>
-                                </Link>
+                              <li className="subitem">
+                                <a href="#">IT Staff Augmentation</a>
                               </li>
-                              <li>
-                                <Link href="">
-                                  <a>Proffesional Seacrh</a>
-                                </Link>
+                              <li className="subitem">
+                                <a href="#">Proffesional Search</a>
                               </li>
-                              <li>
-                                <Link href="">
-                                  <a>Recruit Outsorcing</a>
-                                </Link>
+                              <li className="subitem">
+                                <a href="#">Recruit Outsourcing</a>
                               </li>
                             </ul>
-                            {/* drop down ends*/}
                           </li>
-                          <li>
-                            <Link href="">
-                              <a>iNDUSTRY FOCUS</a>
-                            </Link>
-                            {/*drop down starts */}
-                            <ul>
-                              <li>
-                                <Link href="">
-                                  <a>AI and Robotics</a>
-                                </Link>
+                          <li className="item has-submenu">
+                            <a tabindex="0">Plans</a>
+                            <ul className="submenu">
+                              <li className="subitem">
+                                <a href="#">Freelancer</a>
                               </li>
-                              <li>
-                                <Link href="">
-                                  <a>Fintech & Insurance</a>
-                                </Link>
+                              <li className="subitem">
+                                <a href="#">Startup</a>
                               </li>
-                              <li>
-                                <Link href="">
-                                  <a>Communication & IT</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="">
-                                  <a>Government</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="">
-                                  <a>Health care & Life Sciences</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="">
-                                  <a>Industrial & Manufacturing</a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href="">
-                                  <a>Renewable Energy</a>
-                                </Link>
+                              <li className="subitem">
+                                <a href="#">Enterprise</a>
                               </li>
                             </ul>
-                            {/*drop down ends */}
                           </li>
-                          <li>
-                            <Link href="/jobs">
-                              <a>JOBS</a>
-                            </Link>
+                          <li className="item">
+                            <a href="#">Blog</a>
                           </li>
-                          <li>
-                            <Link href="/thoughtleadership">
-                              <a>THOUGHT LEADERSHIP</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/contact">
-                              <a>CONTACT</a>
-                            </Link>
+                          <li className="item">
+                            <a href="#">Contact</a>
                           </li>
                         </ul>
                       </nav>
+                      {*/}
+                      <script></script>
                     </div>
+
                     <style jsx>{`
                        {
-                        .mobileMenu {
-                          display: inline-block;
-                          cursor: pointer;
-                          width: 25.5px;
-                          height: 17px;
-                          margin: 18.3px 0 139.7px 156px;
-                          object-fit: contain;
-}
-                        }
-                        .bar1,
-                        .bar2,
-                        .bar3 {
-                          width: 35px;
-                          height: 5px;
-                          background-color: white;
-                          margin: 6px 0;
-                          transition: 0.4s;
-                        }
-                        .change .bar1 {
-                          -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-                          transform: rotate(-45deg) translate(-9px, 6px);
-                        }
-                        .change .bar2 {
-                          opacity: 0;
-                        }
-                        .change .bar3 {
-                          -webkit-transform: rotate(45deg) translate(-8px, -8px);
-                          transform: rotate(45deg) translate(-8px, -8px);
-                        }
-
-                        .nav-area:after {
-                          content: "";
-                          clear: both;
-                          display: block;
-                        }
-
-                        .nav-area > ul > li {
-                          float: left;
-                          position: relative;
-                        }
-                        .nav-area ul ul li {
-                          margin: 5%;
-                        }
-                        .nav-area ul ul {
-                          position: absolute;
-                          padding: 0;
-                          /*min-width:160px;*/
-                          width: 300px;
-                          height: 500px;
-                          display: none;
-                          top: 100%;
-                          left: 0;
-                          background-color: white;
-                        }
-                        .nav-area ul ul a {
-                          color: black;
-                        }
-                        ul {
-                          float: left;
-
-                          list-style: none;
-                        }
-                        a {
-                          color: ${this.props.color};
-
-                          text-transform: capitalize;
-                        }
-                        li {
-                          float: left;
-                          margin: 30px;
-                          font-family: Roboto;
-                          font-size: 15px;
-                          font-weight: 500;
-                          font-stretch: normal;
-                          font-style: normal;
-                          line-height: 2.3;
-                          letter-spacing: 2.7px;
-                          text-align: left;
-                          color: #ffffff;
+                        .toggle {
+                          margin-left: 69%;
+                          color: white;
                         }
                         .logo {
-                          padding-top: 4%;
-                        }
-                        .logo img {
-                          width: 100.8px;
-                          height: 27.2px;
-                          margin: 26px 217.2px 132.7px 39px;
-                          object-fit: contain;
-                        }
-                         {
-                           {
-                            /* for showing drop downs when hover over the main menu */
-                          }
-                        }
-                        .nav-area ul li:hover > ul {
-                          display: block;
-                        }
-
-                        .nav-area ul li a:hover,
-                        .nav-area ul li a:active {
-                          border-bottom: solid 3px #ff6139;
-                          color: #ff6139;
-                          animation: fadeIn ease 20s;
+                          margin-left: 14%;
                         }
                       }
                     `}</style>
@@ -300,16 +149,6 @@ export default class NavBar extends Component {
                     {/*navbar link sections */}
 
                     <div className="nav-link-wrapper col-8 ">
-                      {/*  3 line menu bar  */}
-                      <div
-                        className="mobileMenu"
-                        onClick={(e) => this.myFunction(e)}
-                      >
-                        <div className="bar1"></div>
-                        <div className="bar2"></div>
-                        <div className="bar3"></div>
-                      </div>
-
                       <nav className="nav-area" id="myLinks">
                         <ul className="firstul">
                           <li>

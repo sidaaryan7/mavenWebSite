@@ -9,6 +9,10 @@ export default class HomePageText extends Component {
     Hidden: "true",
   };
 
+  onKeyUp = () => {
+    console.log(e.keyCode);
+  };
+
   render() {
     return (
       <div>
@@ -68,7 +72,7 @@ export default class HomePageText extends Component {
                           padding: 50px 26px 27px 31px;
                           object-fit: contain;
                           background-color: #ff6139;
-                          margin-top: -47%;
+                          margin-top: -5%;
                           margin-left: 7%;
                         }
 
@@ -183,7 +187,7 @@ export default class HomePageText extends Component {
                           style={{ background: "#ffffff" }}
                         >
                           <p className="textbox-2-p1">Scroll to discover</p>
-                          <div className="blackarrow">
+                          <div onKeyUp={this.onKeyUp} className="blackarrow">
                             <input type="image" src="/images/blackarrow.svg" />
                           </div>
                         </div>

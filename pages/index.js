@@ -6,6 +6,8 @@ import Media from "react-media";
 import WhoWeAre from "../components/WhoWeAre/index";
 import SolutionHome from "../components/SolutionHome/index";
 import OurClient from "../components/OurClient/index";
+import LocationHome from "../components/LocationHome";
+import Footer from "../components/Layout/Footer/index";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -32,7 +34,26 @@ export default function Home() {
                 <Header />
                 <WhoWeAre />
                 <SolutionHome />
-                <OurClient />
+                <div>
+                  <p>Our Clients</p>
+                  <OurClient />
+                </div>
+                <div className="mlocationHome">
+                  <LocationHome />
+                </div>
+                <div className="mFooter">
+                  <Footer />
+                </div>
+
+                <style jsx>
+                  {`
+                     {
+                      .mlocationHome {
+                        margin-top: 30%;
+                      }
+                    }
+                  `}
+                </style>
               </>
             )}
             {matches.medium && <p>I am medium!</p>}
