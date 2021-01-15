@@ -4,6 +4,10 @@ import OurClient from "../components/OurClient";
 import LocationMap from "../components/LocationMap";
 import AboutBlueComponent from "../components/AboutBlueComponent";
 import NavBar from "../components/Layout/Header/NavBar";
+import Media from "react-media";
+import LocationHome from "../components/LocationHome/index";
+
+import AboutusMobileCard from "../components/AboutusMobileCard/index";
 
 const imgSrc = require("/home/maven/aaa/public/images/Logo.png");
 
@@ -11,109 +15,311 @@ export default function about() {
   const [active, setActive] = useState("FirstCard");
   return (
     <div className="">
-      <div className="row about-header">
-        <div className="col">
-          <NavBar color={"white"} logosrc={imgSrc} />
-        </div>
-        <div className="textbox-1">
-          <p className="p1">about us</p>
-          <p className="p2">Everything You will know</p>
-        </div>
-        <div className="textbox-2">
-          <p className="">
-            With cutting-edge proprietary systems and an unrivalled ability to
-            address the talent, we offer expertise that is sure to align your
-            organizational values and vision. Our unique approach to our
-            professional, executive, and recruitment process allows us to
-            address your important apprehensions and deliver proven results in a
-            rapidly shifting landscape of human capital sector. Our large
-            structured and process driven database along with our delivery-based
-            model ensures sourcing the ideal talent for diversified industries
-            at the right time and at the right cost. Hence, making it a great
-            value for the investment.
-          </p>
-          <button className="headerButton">scroll down</button>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col">
-          <div className="d-flex d-flex justify-content-center blue-section">
-            <button
-              className="blue-button"
-              onClick={() => {
-                setActive("FirstCard");
-              }}
-            >
-              About Maven
-            </button>
-            <button
-              className="blue-button"
-              onClick={() => {
-                setActive("SecondCard");
-              }}
-            >
-              Our value system
-            </button>
-            <button
-              className="blue-button"
-              onClick={() => {
-                setActive("ThirdCard");
-              }}
-            >
-              industry focus
-            </button>
-          </div>
-        </div>
-      </div>
+      <Media
+        queries={{
+          small: "(max-width: 500px)",
+          medium: "(min-width: 600px) and (max-width: 1199px)",
+          large: "(min-width: 1200px)",
+        }}
+      >
+        {(matches) => (
+          <>
+            {matches.small && (
+              <>
+                <div className="mainHeader">
+                  <div className="mnavbar">
+                    <NavBar logosrc={imgSrc} />
+                  </div>
+                  {/*CARD ROWS START HERE */}
+                  <div className="cards row">
+                    <div className=" col">
+                      <div className="row">
+                        <div className="col">
+                          <div className=" firstCard">
+                            <div className="firstCard-p">
+                              <p>About Maven</p>
+                              <button
+                                class="dropbtn"
+                                className="blue-button"
+                                onClick={() => {
+                                  setActive("FirstCard");
+                                }}
+                              >
+                                <i className="fa fa-caret-down"></i>
+                              </button>
+                            </div>
+                            <div className="cardcommon">
+                              {active === "FirstCard" && <AboutusMobileCard />}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
-      <div className="row blue-section">
-        <div className="col">
-          {active === "FirstCard" && (
-            <AboutBlueComponent
-              title={"GOOD PEOPLE & GREAT PRECISION"}
-              content={
-                "A passionate team of good people is working round the clock in Making an indelible mark in the world of Staffing and Talent Acquisition industry by providing efficient solutions.Since its inception in 2008, Maven Workforce has come across a long way and has become a global leader in Staffing and Talent Acquisition industry. From small to medium to enterprise level, Maven has been advising clients globally for Talent Search and acquisition by identifying ideal talent who aid in giving companies a competitive edge.It’s all about precision. We take pride in identifying and finding the perfect talent. Our client-centred, technological driven and holistic solutions engulf every aspect of talent acquisition process.With cutting-edge proprietary systems and an unrivalled ability to address the talent, we offer expertise that is sure to align your organizational values and vision. Our unique approach to our professional, executive, and recruitment process allows us to address your important apprehensions and deliver proven results in a rapidly shifting landscape of human capital sector.Our large structured and process driven database along with our delivery-based model ensures sourcing the ideal talent for diversified industries at the right time and at the right cost. Hence, making it a great value for the investment."
-              }
-            />
-          )}
-          {active === "SecondCard" && (
-            <AboutBlueComponent title={"2nd card"} content={"2nd card"} />
-          )}
-          {active === "ThirdCard" && (
-            <AboutBlueComponent title={"3rd card"} content={"3rd card"} />
-          )}
-        </div>
-      </div>
+                      {/*second card starts */}
 
-      <div className="row">
-        <div className="col">
-          <div>
-            <p className="ourclient-text">our client</p>
-          </div>
-        </div>
-      </div>
-      <div className="row ourclient">
-        <div className="col">
-          <OurClient />
-        </div>
-      </div>
+                      <div className="row">
+                        <div className="col">
+                          <div className="secondCard">
+                            <div>
+                              ￼￼<p>Our Value System</p>
+                              <button
+                                class="dropbtn"
+                                className="blue-button"
+                                onClick={() => {
+                                  setActive("SecondCard");
+                                }}
+                              >
+                                <i className="fa fa-caret-down"></i>
+                              </button>
+                            </div>
+                            <div>
+                              {active === "SecondCard" && <AboutusMobileCard />}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {/*second card ends */}
 
-      <div className="row">
-        <div className="col">
-          <LocationMap />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col footer">
-          <Footer />
-        </div>
-      </div>
+                      {/* THIRD CARD STARTS HERE */}
 
-      <div className="row">
-        <div className="col"></div>
-      </div>
-      <style jsx>
-        {`
+                      <div className="row">
+                        <div className="col">
+                          <div className="thirdCard">
+                            <div>
+                              <p>Industry Focus</p>
+                              <button
+                                class="dropbtn"
+                                className="blue-button"
+                                onClick={() => {
+                                  setActive("ThirdCard");
+                                }}
+                              >
+                                <i className="fa fa-angle-down"></i>
+                              </button>
+                            </div>
+                            <div>
+                              {active === "ThirdCard" && <AboutusMobileCard />}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* THIRD CARD ENDS HERE */}
+                    </div>
+                  </div>
+                  {/*CARD ROWS ENDS HERE */}
+                </div>
+
+                <div className="mOurclient">
+                  <p>our clients</p>
+                  <OurClient />
+                </div>
+
+                <div className="mLocation">
+                  <LocationHome />
+                </div>
+                <div className="mFooter">
+                  <Footer />
+                </div>
+                <style jsx>
+                  {`
+                     {
+                      .mainHeader {
+                        width: 100%;
+
+                        background-image: radial-gradient(
+                            rgba(255, 255, 255, -0.15),
+                            rgba(0, 0, 0, 0.9)
+                          ),
+                          url("images/aboutusbanner.png");
+                        background-repeat: no-repeat;
+
+                        background-size: 100%;
+
+                        object-fit: cover;
+                      }
+                      p {
+                        color: white;
+                        display: inline;
+                        width: 151px;
+                        height: 29px;
+                        margin: 0 0px 0 0;
+                        font-family: Poppins;
+                        font-size: 21px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.14;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #000000;
+                      }
+                      .firstcard-p p {
+                        background: #ffffff;
+                      }
+                      .cards {
+                        margin-top: 25%;
+                        margin-left: 9%;
+                        margin-right: 9%;
+                      }
+                      .firstCard {
+                        width: 345px;
+                        margin: 8px 15px 15px;
+                        padding: 22px 21.5px 24px 23px;
+                        background-color: #ff6139;
+                        overflow: hidden;
+                        min-height: 75px;
+                      }
+
+                      .secondCard {
+                        width: 345px;
+
+                        margin: 8px 15px 15px;
+                        padding: 22px 21.5px 24px 23px;
+                        background-color: #d0daf4;
+                        overflow: hidden;
+                        min-height: 75px;
+                      }
+                      .thirdCard {
+                        width: 345px;
+                        min-height: 75px;
+                        overflow: hidden;
+                        margin: 15px 15px 20px;
+                        padding: 23px 21.5px 23px 23px;
+                        background-color: #f4f4f4;
+                      }
+
+                      .mOurclient {
+                        background: #f2f3f5;
+                        padding-top: 5%;
+                      }
+
+                      .mOurclient p {
+                        margin-left: 40%;
+
+                        margin-bottom: 10%;
+                      }
+                      .mLocation {
+                        background: #ffffff;
+                      }
+                      .mFooter {
+                        background: #f2f3f5;
+                      }
+                    }
+                  `}
+                </style>
+              </>
+            )}
+            {matches.medium && <p>I am medium!</p>}
+            {matches.large && (
+              <>
+                <div className="row about-header">
+                  <div className="col">
+                    <NavBar color={"white"} logosrc={imgSrc} />
+                  </div>
+                  <div className="textbox-1">
+                    <p className="p1">about us</p>
+                    <p className="p2">Everything You will know</p>
+                  </div>
+                  <div className="textbox-2">
+                    <p className="">
+                      With cutting-edge proprietary systems and an unrivalled
+                      ability to address the talent, we offer expertise that is
+                      sure to align your organizational values and vision. Our
+                      unique approach to our professional, executive, and
+                      recruitment process allows us to address your important
+                      apprehensions and deliver proven results in a rapidly
+                      shifting landscape of human capital sector. Our large
+                      structured and process driven database along with our
+                      delivery-based model ensures sourcing the ideal talent for
+                      diversified industries at the right time and at the right
+                      cost. Hence, making it a great value for the investment.
+                    </p>
+                    <button className="headerButton">scroll down</button>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col">
+                    <div className="d-flex d-flex justify-content-center blue-section">
+                      <button
+                        className="blue-button"
+                        onClick={() => {
+                          setActive("FirstCard");
+                        }}
+                      >
+                        About Maven
+                      </button>
+                      <button
+                        className="blue-button"
+                        onClick={() => {
+                          setActive("SecondCard");
+                        }}
+                      >
+                        Our value system
+                      </button>
+                      <button
+                        className="blue-button"
+                        onClick={() => {
+                          setActive("ThirdCard");
+                        }}
+                      >
+                        industry focus
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className="row blue-section">
+                  <div className="col">
+                    {active === "FirstCard" && (
+                      <AboutBlueComponent
+                        title={"GOOD PEOPLE & GREAT PRECISION"}
+                        content={
+                          "A passionate team of good people is working round the clock in Making an indelible mark in the world of Staffing and Talent Acquisition industry by providing efficient solutions.Since its inception in 2008, Maven Workforce has come across a long way and has become a global leader in Staffing and Talent Acquisition industry. From small to medium to enterprise level, Maven has been advising clients globally for Talent Search and acquisition by identifying ideal talent who aid in giving companies a competitive edge.It’s all about precision. We take pride in identifying and finding the perfect talent. Our client-centred, technological driven and holistic solutions engulf every aspect of talent acquisition process.With cutting-edge proprietary systems and an unrivalled ability to address the talent, we offer expertise that is sure to align your organizational values and vision. Our unique approach to our professional, executive, and recruitment process allows us to address your important apprehensions and deliver proven results in a rapidly shifting landscape of human capital sector.Our large structured and process driven database along with our delivery-based model ensures sourcing the ideal talent for diversified industries at the right time and at the right cost. Hence, making it a great value for the investment."
+                        }
+                      />
+                    )}
+                    {active === "SecondCard" && (
+                      <AboutBlueComponent
+                        title={"2nd card"}
+                        content={"2nd card"}
+                      />
+                    )}
+                    {active === "ThirdCard" && (
+                      <AboutBlueComponent
+                        title={"3rd card"}
+                        content={"3rd card"}
+                      />
+                    )}
+                  </div>
+                </div>
+                x;{" "}
+                <div className="row">
+                  <div className="col">
+                    <div>
+                      <p className="ourclient-text">our client</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="row ourclient">
+                  <div className="col">
+                    <OurClient />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col">
+                    <LocationMap />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col footer">
+                    <Footer />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col"></div>
+                </div>
+                <style jsx>
+                  {`
            {
             .about-header {
                {
@@ -231,7 +437,12 @@ export default function about() {
             }
           }
         `}
-      </style>
+                </style>
+              </>
+            )}
+          </>
+        )}
+      </Media>
     </div>
   );
 }

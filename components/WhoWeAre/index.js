@@ -19,130 +19,357 @@ export default function WhoWeAre({ doSomething }) {
           <>
             {matches.small && (
               <>
-                <div className="row">
-                  <div className="row text-section">
-                    <div className="col-12">
-                      <div className="textbox-1">
-                        <p className="textbox-1-p1">WHO WE ARE</p>
-                        <p className="textbox-1-p2">
-                          Making an indelible mark in the human recruitment
-                          industry
-                        </p>
-                        <p className="textbox-1-p3">
-                          Maven Workforce has been advising clients globally on
-                          matters involving Talent Acquisition and Staffing.
-                        </p>
+                <div className="mainDiv">
+                  {/* text box starts*/}
+                  <div className="row text-box">
+                    <div className="col">
+                      <div className="row">
+                        <div className="col">
+                          <p className="text-box-p1">WHO WE ARE</p>
+                        </div>
                       </div>
 
-                      <div className="row icon">
-                        <div className="col-6">
-                          <div className="">
-                            <Image
-                              src="/images/shareblack.svg"
-                              layout="fixed"
-                              height={57}
-                              width={60}
-                            ></Image>
-                          </div>
-
-                          <div className="">
-                            <p className="icon-text-common">20</p>
-                            <p className="icon-text-common1">
-                              Year in Business
-                            </p>
-                          </div>
-                          <div className="">
-                            <Image
-                              src="/images/globeblack.svg"
-                              layout="fixed"
-                              height={56}
-                              width={56}
-                            ></Image>
-                          </div>
-
-                          <div className="">
-                            <p className="icon-text-common">3,000+</p>
-                            <p className="icon-text-common1">
-                              Employees globally
-                            </p>
-                          </div>
+                      <div className="row">
+                        <div className="col">
+                          <p className="text-box-p2">
+                            We help your business grow multi-folds by delivering
+                            efficient staffing solutions.
+                          </p>
                         </div>
+                      </div>
 
-                        <div className="col-6">
-                          <div className="">
-                            <Image
-                              src="/images/handsShakeBlack.svg"
-                              layout="fixed"
-                              height={41}
-                              width={65}
-                            ></Image>
-                          </div>
-
-                          <div className="">
-                            <p className="icon-text-common">50+</p>
-                            <p className="icon-text-common1">
-                              Fortune 500 clients
-                            </p>
-                          </div>
-                          <div className="">
-                            <Image
-                              src="/images/statsBlack.svg"
-                              layout="fixed"
-                              height={64}
-                              width={60}
-                            ></Image>
-                          </div>
-                          <div className="">
-                            <p className="icon-text-common">$XX+</p>
-                            <p className="icon-text-common1">Million Revenue</p>
-                          </div>
+                      <div className="row">
+                        <div className="col">
+                          <p className="text-box-p3">
+                            We help your business grow multi-folds by delivering
+                            efficient staffing solutions.
+                          </p>
                         </div>
                       </div>
                     </div>
+                  </div>
+                  {/* text box ends*/}
 
-                    <div className="row">
-                      <div className="col-12">
-                        <div className="whitediv">
-                          <div className="row whitediv-box1">
-                            <div className="col">
-                              <p>Find Your Career</p>
-                            </div>
-                            <div className="col">
-                              <input
-                                type="image"
-                                src="/images/whiteArrowRight.svg"
-                              />
-                            </div>
+                  {/* icon starts */}
+
+                  <div className="row iconrow">
+                    <div className="col">
+                      <div className="icon-1">
+                        <img src="images/shareblack.svg"></img>
+                        <p className="icon1-p1">20</p>
+                        <p className="icon1-p2">Year in Business</p>
+                      </div>
+                    </div>
+                    <div className="col">
+                      <div className="icon-2">
+                        <img src="images/globeblack.svg"></img>
+                        <p className="icon2-p1">3,000+</p>
+                        <p className="icon2-p2">Employees globally</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="row iconrow">
+                    <div className="col">
+                      <div className="icon-3">
+                        <img src="images/handsShakeBlack.svg"></img>
+                        <p className="icon3-p1">50+</p>
+                        <p className="icon3-p2">Fortune 500 clients</p>
+                      </div>
+                    </div>
+                    <div className="col">
+                      <div className="icon-4">
+                        <img src="images/statsBlack.svg"></img>
+                        <p className="icon4-p1">$XX+</p>
+                        <p className="icon4-p2">Million Revenue</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="row">
+                    <div className="col-12">
+                      <div className="whitediv">
+                        <div className="row whitediv-box1">
+                          <div className="col">
+                            <p>Find Your Career</p>
                           </div>
-                          <div className="row whitediv-box2">
-                            <div className="col">
-                              <p>Find Your Career</p>
-                            </div>
-                            <div className="col">
-                              <input
-                                type="image"
-                                src="/images/blackArrowRight.svg"
-                              />
-                            </div>
+                          <div className="col">
+                            <input
+                              type="image"
+                              src="/images/whiteArrowRight.svg"
+                            />
                           </div>
-                          <div className="row whitediv-box3">
-                            <div className="col">
-                              <p>Find Your Career</p>
-                            </div>
-                            <div className="col">
-                              <input
-                                type="image"
-                                src="/images/blackArrowRight.svg"
-                              />
-                            </div>
+                        </div>
+                        <div className="row whitediv-box2">
+                          <div className="col">
+                            <p>Find Your Career</p>
+                          </div>
+                          <div className="col">
+                            <input
+                              type="image"
+                              src="/images/blackArrowRight.svg"
+                            />
+                          </div>
+                        </div>
+                        <div className="row whitediv-box3">
+                          <div className="col">
+                            <p>Find Your Career</p>
+                          </div>
+                          <div className="col">
+                            <input
+                              type="image"
+                              src="/images/blackArrowRight.svg"
+                            />
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <style jsx>
-                    {`
+                  {/*icons end */}
+                </div>
+
+                <style jsx>
+                  {`
+            
+                  .mainDiv {
+                    width: 100%;
+                    height: 982px;
+                    margin: 19px 0 0;
+                    padding: 339px 15px 32px;
+                    background-color: #f7f7f7;
+                    margin-top: 0px;
+                      }
+                      .text-box{
+                        padding-left:5%;
+                      }
+
+                      .text-box-p1 {
+                        height: 11px;
+                        margin: 0 90px 15px 0;
+                        font-family: Roboto;
+                        font-size: 10px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 5.4;
+                        letter-spacing: 3.3px;
+                        text-align: left;
+                      }
+
+                      .text-box-p2 {
+                        height: 94px;
+                        margin: 15px 13px 20px 0;
+                        font-family: Poppins;
+                        font-size: 20px;
+                        font-weight: 500;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.65;
+                        letter-spacing: normal;
+                        text-align: left;
+                      }
+
+                      .iconrow{
+                        padding-left:5%;
+                        padding-right:5%;
+                      }
+
+                      .icon-1 {
+                        width: 165px;
+                        height: 140px;
+                        margin: 22px 15px 15px 0;
+                        padding: 20px 38px 13px 39px;
+                        background-color: #ffffff;
+                      }
+
+                      .icon-1 img {
+                        width: 47.9px;
+                        height: 46px;
+                        margin: 0 20.1px 10px 20px;
+                        object-fit: contain;
+                      }
+
+                      .icon1-p1 {
+                        width: 32px;
+                        height: 36px;
+                        margin: 0 28px 1px;
+                        font-family: Poppins;
+                        font-size: 26px;
+                        font-weight: 500;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.77;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #202940;
+                        
+                      }
+
+
+
+                      .icon1-p2{
+                        width: 88px;
+                        height: 14px;
+                        margin: 1px 0 0;
+                        opacity: 0.6;
+                        font-family: Roboto;
+                        font-size: 12px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 2;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #202940;
+
+                      }
+                      .icon-2 {
+                        width: 165px;
+                        height: 140px;
+                        margin: 22px 0 15px 15px;
+                        padding: 21px 31px 13px 32px;
+                        background-color: #ffffff;
+                      }
+
+                      .icon-2 img {
+                        width: 44.3px;
+                        height: 44.3px;
+                        margin: 0 28.7px 10.7px 29px;
+                        object-fit: contain;
+                      }
+
+                      .icon2-p1 {
+                        width: 90px;
+                        height: 36px;
+                        margin: 0 6px 1px;
+                        font-family: Poppins;
+                        font-size: 26px;
+                        5%font-style: normal;
+                        line-height: 1.77;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #202940;
+}
+                        
+                      }
+                      .icon2-p2{
+                      width: 102px;
+                      height: 14px;
+                      margin: 1px 0 0;
+                      opacity: 0.6;
+                      font-family: Roboto;
+                      font-size: 12px;
+                      font-weight: normal;
+                      font-stretch: normal;
+                      font-style: normal;
+                      line-height: 2;
+                      letter-spacing: normal;
+                      text-align: left;
+                      color: #202940;
+                      }
+
+
+                      .icon-3 {
+                        width: 165px;
+                        height: 140px;
+                        margin: 15px 15px 0 0;
+                        padding: 21.5px 31px 15px;
+                        background-color: #ffffff;
+                      }
+
+                      .icon-3 img {
+                        width: 57.3px;
+                        height: 37.2px;
+                        margin: 0 22.7px 15.3px 23px;
+                        object-fit: contain;
+                      }
+
+                      .icon3-p1 {
+                        width: 52px;
+                        height: 36px;
+                        margin: 0 23px 1px 28px;
+                        font-family: Poppins;
+                        font-size: 26px;
+                        font-weight: 500;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.77;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #202940;
+}
+                        
+                      }
+
+                      .icon3-p2{
+                        width: 103px;
+                        height: 14px;
+                        margin: 1px 0 0;
+                        opacity: 0.6;
+                        font-family: Roboto;
+                        font-size: 12px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 2;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #202940;
+
+                      }
+                      .icon-4 {
+                        width: 165px;
+                        height: 140px;
+                        margin: 15px 0 0 15px;
+                        padding: 16.7px 40px 15px 41px;
+                        background-color: #ffffff;
+                      }
+
+                      .icon-4 img {
+                        width: 43px;
+                        height: 46.4px;
+                        margin: 0 21px 10.9px 20px;
+                        object-fit: contain;
+                      }
+
+                      .icon4-p1 {
+                        width: 66px;
+                        height: 36px;
+                        margin: 0 9px 1px;
+                        font-family: Poppins;
+                        font-size: 26px;
+                        font-weight: 500;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.77;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #202940;
+}
+                        
+                      }
+
+                      .icon4-p2{
+                        width: 84px;
+                        height: 14px;
+                        margin: 1px 0 0;
+                        opacity: 0.6;
+                        font-family: Roboto;
+                        font-size: 12px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 2;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #202940;
+
+
+                      }
+
+
+            
             p {
               color: black;
             }
@@ -157,13 +384,13 @@ export default function WhoWeAre({ doSomething }) {
             }
             .whitediv {
               position: relative;
-              top: 19%;
+              top: 30%;
               width: 303px;
-              height: 588px;
-              margin: 84px 0 0;
-              padding: 47px 41px 163px 43px;
+              height: 344px;
+              margin: -14px 0 0;
+              padding: 20px 41px 0px 43px;
               background-color: #ffffff;
-              z-index:-1;
+              z-index: -1;
             }
             .icon-text-common {
               font-family: Poppins;
@@ -218,7 +445,7 @@ export default function WhoWeAre({ doSomething }) {
           width: 333px;
           height: 61px;
           margin: 20px 12px 15px 0;
-          font-family: Poppins;
+          
           font-size: 20px;
           font-weight: 500;
           font-stretch: normal;
@@ -326,8 +553,7 @@ export default function WhoWeAre({ doSomething }) {
 
             
           `}
-                  </style>
-                </div>
+                </style>
               </>
             )}
             {matches.medium && <p>I am medium!</p>}

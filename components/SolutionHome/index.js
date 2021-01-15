@@ -53,7 +53,7 @@ export default function SolutionHome({ doSomething }) {
 
                   {/* icon starts */}
 
-                  <div className="row">
+                  <div className="row iconrow">
                     <div className="col">
                       <div className="icon-1">
                         <img src="images/proSearchM.svg"></img>
@@ -68,7 +68,7 @@ export default function SolutionHome({ doSomething }) {
                     </div>
                   </div>
 
-                  <div className="row">
+                  <div className="row iconrow">
                     <div className="col">
                       <div className="icon-3">
                         <img src="images/itStaffM.svg"></img>
@@ -83,7 +83,7 @@ export default function SolutionHome({ doSomething }) {
                     </div>
                   </div>
 
-                  <div className="row">
+                  <div className="row iconrow">
                     <div className="col">
                       <div className="icon-5">
                         <img src="/images/flexiStaM.svg"></img>
@@ -117,7 +117,11 @@ export default function SolutionHome({ doSomething }) {
                         background-color: #202940;
                         margin-top: 59%;
                       }
-
+                      .text-box{
+                        padding-right: 5%;
+                        padding-left: 5%;
+}
+                      }
                       .text-box-p1 {
                         height: 11px;
                         margin: 0 90px 15px 0;
@@ -155,6 +159,11 @@ export default function SolutionHome({ doSomething }) {
                         line-height: 1.71;
                         letter-spacing: normal;
                         text-align: left;
+                      }
+
+                      .iconrow {
+                        padding-left: 5%;
+                        padding-right: 5%;
                       }
                       .icon-1 {
                         width: 165px;

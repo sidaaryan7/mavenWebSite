@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../components/Layout/Footer";
+import Media from "react-media";
 
 import ContactForm from "../components/ContactForm";
 
@@ -11,49 +12,170 @@ const imgSrc = require("/home/maven/aaa/public/images/Logo.png");
 export default function contact() {
   return (
     <div className="">
-      <div className="row header">
-        <div className="col">
-          <NavBar color={"white"} logosrc={imgSrc} />
-          <div className="textbox-1">
-            <p className="textbox-1-p-1">Contact Us </p>
-            <p className="textbox-1-p-2">Don’t be shy, Say Hi.</p>
-          </div>
-          <div className="textbox-2">
-            <p className="">
-              A passionate team of good people is working round the clock in
-              Making an indelible mark in the world of Staffing and Talent
-              Acquisition industry by providing efficient solutions.
-            </p>
-            <button>Send Message</button>
-          </div>
-          <div className="chatboticon">
-            <Image
-              src="/images/chatbot.svg"
-              layout="fixed"
-              height={100}
-              width={100}
-            ></Image>
-          </div>
-        </div>
-      </div>
-      <div className="row ">
-        <div className="col-12">
-          <ContactForm />
-        </div>
-      </div>
-      <div className="row ">
-        <div className="col-12">
-          <LocationMap />
-        </div>
-      </div>
-      <div className="row ">
-        <div className="col-12 footerrow">
-          <Footer />
-        </div>
-      </div>
+      <Media
+        queries={{
+          small: "(max-width: 500px)",
+          medium: "(min-width: 600px) and (max-width: 1199px)",
+          large: "(min-width: 1200px)",
+        }}
+      >
+        {(matches) => (
+          <>
+            {matches.small && (
+              <>
+                <div className="mainHeader">
+                  <div className="mNavbar">
+                    <NavBar color={"white"} logosrc={imgSrc} />
+                  </div>
+                </div>
 
-      <style jsx>
-        {`
+                <div className="textbox">
+                  <p className="textbox-p1">Don’t be shy, Say Hi.</p>
+                  <p className="textbox-p2">
+                    A passionate team of good people is working round the clock
+                    in Making an indelible mark in the world of Staffing and
+                    Talent Acquisition industry by providing efficient
+                    solutions.
+                  </p>
+                  <p className="textbox-p3">Send Message</p>
+                  <button>
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                  </button>
+                </div>
+
+                <div className="mContactform">
+                  <ContactForm />
+                </div>
+
+                <style jsx>
+                  {`
+                     {
+                      .mNavbar {
+                        padding-top: 5%;
+                      }
+                      .mainHeader {
+                        background-image: radial-gradient(
+                            rgba(255, 255, 255, -0.15),
+                            rgba(0, 0, 0, 0.9)
+                          ),
+                          url("images/contactbanner.png");
+                        background-repeat: no-repeat;
+
+                        background-size: 100%;
+                        height: 255px;
+                        object-fit: cover;
+                      }
+
+                      .textbox {
+                        background-color: #ff6139;
+                        margin-left: 5%;
+                        margin-right: 5%;
+                        margin-top: -24%;
+                        padding-left: 10%;
+                        padding-top: 5%;
+                        padding-bottom: 5%;
+                      }
+
+                      .textbox-p1 {
+                        width: 206px;
+                        height: 90px;
+                        margin: 0 82px 17px 0;
+                        font-family: Poppins;
+                        font-size: 32px;
+                        font-weight: 500;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.41;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #ffffff;
+                      }
+
+                      .textbox-p2 {
+                        width: 288px;
+                        height: 96px;
+                        margin: 17px 0 15px;
+                        font-family: Roboto;
+                        font-size: 13px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.85;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #ffffff;
+                      }
+                      .textbox-p3 {
+                        height: 17px;
+                        margin: 0 8.5px 0 0;
+                        font-family: Poppins;
+                        font-size: 12px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.5;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #ffffff;
+                        display: inline;
+                      }
+
+                      button {
+                        background: none;
+                        border: none;
+                      }
+                    }
+                  `}
+                </style>
+              </>
+            )}
+            {matches.medium && <p>I am medium!</p>}
+            {matches.large && (
+              <>
+                <div className="row header">
+                  <div className="col">
+                    <NavBar color={"white"} logosrc={imgSrc} />
+                    <div className="textbox-1">
+                      <p className="textbox-1-p-1">Contact Us </p>
+                      <p className="textbox-1-p-2">Don’t be shy, Say Hi.</p>
+                    </div>
+                    <div className="textbox-2">
+                      <p className="">
+                        A passionate team of good people is working round the
+                        clock in Making an indelible mark in the world of
+                        Staffing and Talent Acquisition industry by providing
+                        efficient solutions.
+                      </p>
+                      <button>Send Message</button>
+                    </div>
+                    <div className="chatboticon">
+                      <Image
+                        src="/images/chatbot.svg"
+                        layout="fixed"
+                        height={100}
+                        width={100}
+                      ></Image>
+                    </div>
+                  </div>
+                </div>
+                <div className="row ">
+                  <div className="col-12">
+                    <ContactForm />
+                  </div>
+                </div>
+                <div className="row ">
+                  <div className="col-12">
+                    <LocationMap />
+                  </div>
+                </div>
+                <div className="row ">
+                  <div className="col-12 footerrow">
+                    <Footer />
+                  </div>
+                </div>
+
+                <style jsx>
+                  {`
            {
             .header {
               background-image: radial-gradient(
@@ -145,7 +267,12 @@ export default function contact() {
             position:relative;
           }
         `}
-      </style>
+                </style>
+              </>
+            )}
+          </>
+        )}
+      </Media>
     </div>
   );
 }

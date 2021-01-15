@@ -134,6 +134,41 @@ export default class HomePageText extends Component {
                           color: #ffffff;
                           display: inline;
                         }
+
+                         {
+                          /* responsive csss */
+                        }
+
+                        @media only screen and (min-width: 466px) and (max-width: 481px) {
+                          .mainDiv {
+                            width: 400px;
+                          }
+                        }
+
+                        @media only screen and (min-width: 450px) and (max-width: 466px) {
+                          .mainDiv {
+                            width: 393px;
+                          }
+                        }
+
+                        @media only screen and (min-width: 440px) and (max-width: 450px) {
+                          .mainDiv {
+                            width: 383px;
+                          }
+                        }
+
+                        @media only screen and (min-width: 400px) and (max-width: 440px) {
+                          .mainDiv {
+                            width: 353px;
+                          }
+                        }
+
+                        @media only screen and (min-width: 360px) and (max-width: 400px) {
+                          .mainDiv {
+                            width: 350px;
+                            margin-left: 8%;
+                          }
+                        }
                       }
                     `}
                   </style>

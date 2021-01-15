@@ -41,6 +41,9 @@ export default class OurClient extends Component {
                   <style jsx>
                     {`
                        {
+                        .mainContainer {
+                          height: 330px;
+                        }
                         .slide1 {
                           display: grid;
                           grid-template-rows: 50% 50% 50%;

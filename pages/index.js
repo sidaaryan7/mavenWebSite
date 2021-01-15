@@ -31,10 +31,17 @@ export default function Home() {
           <>
             {matches.small && (
               <>
-                <Header />
-                <WhoWeAre />
-                <SolutionHome />
-                <div>
+                <div className="mHeader">
+                  <Header />
+                </div>
+                <div className="mWhoweare">
+                  <WhoWeAre />
+                </div>
+                <div className="mSolutionhome">
+                  <SolutionHome />
+                </div>
+
+                <div className="mOurclients">
                   <p>Our Clients</p>
                   <OurClient />
                 </div>
@@ -49,7 +56,38 @@ export default function Home() {
                   {`
                      {
                       .mlocationHome {
-                        margin-top: 30%;
+                        margin-top: 5%;
+                        background: #ffffff;
+                        padding-bottom: 5%;
+                      }
+                      .mSolutionhome {
+                        padding-top: 20%;
+                      }
+
+                      .mOurclients {
+                        background: #f2f3f5;
+                      }
+                      .mOurclients p {
+                        width: 111px;
+                        height: 28px;
+                        /* margin: 0 102px 49px 98px; */
+                        /* font-family: Poppins; */
+                        font-size: 20px;
+                        font-weight: 500;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.65;
+                        letter-spacing: normal;
+                        /* text-align: left; */
+                        color: #000000;
+                        margin-bottom: 10%;
+
+                        margin-left: 40%;
+                        padding-top: 5%;
+                      }
+                      .mFooter {
+                        background-color: #f2f3f5;
+                        padding-top: 5%;
                       }
                     }
                   `}

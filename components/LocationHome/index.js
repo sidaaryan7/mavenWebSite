@@ -90,7 +90,7 @@ export default function LocationHome({ doSomething }) {
                   {`
                      {
                       .p1 {
-                        width: 106px;
+                        
                         /* height: 11px; */
                         margin: 0 254px 15px 15px;
                         font-family: Roboto;
@@ -102,6 +102,7 @@ export default function LocationHome({ doSomething }) {
                         letter-spacing: 3.3px;
                         text-align: left;
                         color: #000000;
+                        padding-left :5%;
                       }
 
                       .p2 {
@@ -117,6 +118,7 @@ export default function LocationHome({ doSomething }) {
                         letter-spacing: normal;
                         text-align: left;
                         color: #000000;
+                        padding-left:5%;
                       }
 
                       .p3{
@@ -133,6 +135,7 @@ export default function LocationHome({ doSomething }) {
                         letter-spacing: normal;
                         text-align: left;
                         color: #000000;
+                        padding-left:5%;
 }
                       }
                       
