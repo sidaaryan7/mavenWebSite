@@ -63,8 +63,10 @@ export default function Header() {
                         object-fit: contain;
                       }
                       .text-banner-section {
-                        width: 80%;
-                        margin-top: 24.5%;
+                        width: 93%;
+                        /* margin-top: 24.5%; */
+                        /* margin: 25% auto; */
+                        margin: 18% auto 0;
                       }
                     }
                   `}

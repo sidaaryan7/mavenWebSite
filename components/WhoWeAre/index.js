@@ -551,6 +551,69 @@ export default function WhoWeAre({ doSomething }) {
               margin-left: 0.5%;
             }
 
+
+
+            {/* responsive  */}
+
+            @media screen and (min-width: 442px) and (max-width: 452px) { 
+                .iconrow{
+                  padding-left: 2%;
+                }
+
+            }
+
+
+            @media screen and (min-width: 417px) and (max-width: 442px) { 
+                .iconrow{
+                  padding-left: 2%;
+                }
+                .icon-1{
+                  margin: 22px -10px 15px 0;
+                }
+
+                .icon-3{
+                  margin: 15px -10px 0 0;
+                }
+
+              }
+
+              @media screen and (min-width: 407px) and (max-width: 417px) { 
+                .iconrow{
+                  ;
+                }
+                .icon-1{
+                  margin:  22px -30px 15px 0;
+                }
+
+                .icon-3{
+                  margin:  22px -30px 15px 0;
+                  
+                }
+
+              }
+
+
+              @media screen and (min-width: 380px) and (max-width: 407px) { 
+                .iconrow{
+                      padding-left: 0; */
+    padding-right: 0;
+                  
+                }
+                .icon-1{
+                  margin: 22px -40px 15px 0;
+                  
+                }
+
+                .icon-3{
+                  margin: 22px -40px 15px 0;
+                  
+                  
+                }
+
+              }
+
+
+
             
           `}
                 </style>

@@ -55,7 +55,7 @@ export default class HomePageText extends Component {
                       </div>
 
                       <div className="row">
-                        <div className="col">
+                        <div className="col p4-col">
                           <p className="mainDiv-p4">Know more</p>
                           <img src="/images/arrow.svg"></img>
                         </div>
@@ -66,14 +66,16 @@ export default class HomePageText extends Component {
                     {`
                        {
                         .mainDiv {
-                          width: 420px;
+                          width: 93%;
                           height: 428px;
-                          /* margin: 55px 15px 542px; */
                           padding: 50px 26px 27px 31px;
                           object-fit: contain;
                           background-color: #ff6139;
-                          margin-top: -5%;
-                          margin-left: 7%;
+                          /* margin-top: -5%; */
+                          /* margin-left: 7%; */
+                          /* margin: 25% auto; */
+                          margin: -5% auto 0;
+}
                         }
 
                         .mainDiv-p1 {
@@ -159,16 +161,118 @@ export default class HomePageText extends Component {
 
                         @media only screen and (min-width: 400px) and (max-width: 440px) {
                           .mainDiv {
-                            width: 353px;
+                            min-width: 400px;
+                            overflow:hidden;
+
                           }
                         }
 
-                        @media only screen and (min-width: 360px) and (max-width: 400px) {
-                          .mainDiv {
-                            width: 350px;
-                            margin-left: 8%;
+                        @media only screen and (min-width: 350px) and (max-width: 400px) {
+                          .mainDiv-p1 {
+                            margin: -12% 0 0 1%;
+                          }
+                          .mainDiv-p3{
+                            width: 100%;
+                            margin: 16px 0 41px;
+
                           }
                         }
+
+                        @media only screen and (min-width: 333px) and (max-width: 350px) {
+                          .p4-col{
+                            padding-top: 48%;
+                          }
+                          
+                          .mainDiv{
+                            padding: 50px 26px 27px 20px;
+                          }
+                          
+                          .mainDiv-p1 {
+                            margin: -29.3px 0px 5px 1px;
+                          }
+                          .mainDiv-p3{
+                            width: 100%;
+                            height: 0;
+
+                          }
+                          .mainDiv-p4{
+                            margin-right: 35%;
+}
+                          }
+                        }
+
+
+                        @media only screen and (min-width:300px ) and (max-width: 333px) {
+                          
+                          
+                          
+                          
+                          .mainDiv-p1 {
+                            margin: -14% auto 0;
+                          }
+                          .mainDiv-p2{
+                            margin: 0 0px 0px -6%;
+                          }
+                          .mainDiv-p3{
+                            width: 100%;
+                            height: 0;
+                            margin: 4% 1% 32% -4%;
+
+                          }
+                          .p4-col{
+                            padding-top:48%;
+                          }
+
+                          
+                        @media only screen and (min-width:300px ) and (max-width: 311px) {
+                          
+                          .mainDiv{
+                            height: 533px;
+                          }
+                          
+                          .mainDiv-p2{
+                            width:200px;
+                          }
+
+                          .mainDiv-p3{
+                            margin: 38% 1% 32% -4%;
+                          }
+
+                          .p4-col{
+                            padding-top: 75%;
+                          }
+                         
+                          
+                        }
+
+
+                        @media only screen and (min-width:280px ) and (max-width: 300px) {
+                          
+                          .mainDiv{
+                            height: 556px;
+                          }
+                          
+                          
+                          .mainDiv-p1{
+                            margin: -48px 0 0 0;
+                            font-size:11px;
+                          }
+
+                          .mainDiv-p2{
+                            font-size:26px;
+                            margin-bottom: -65%;
+                          }
+
+                          .mainDiv-p3{
+                            padding-top: 35%;
+                            font-size: 15px;
+                          }
+                          .p4-col{
+                            padding-top: 112%;
+                          }
+                          
+                        }
+
                       }
                     `}
                   </style>

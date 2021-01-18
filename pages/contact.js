@@ -7,6 +7,7 @@ import ContactForm from "../components/ContactForm";
 import NavBar from "../components/Layout/Header/NavBar";
 import Image from "next/image";
 import LocationMap from "../components/LocationMap";
+import LocationHome from "../components/LocationHome/index";
 
 const imgSrc = require("/home/maven/aaa/public/images/Logo.png");
 export default function contact() {
@@ -45,6 +46,12 @@ export default function contact() {
 
                 <div className="mContactform">
                   <ContactForm />
+                </div>
+                <div className="mLocation">
+                  <LocationHome />
+                </div>
+                <div className="mFooter">
+                  <Footer />
                 </div>
 
                 <style jsx>
@@ -123,6 +130,14 @@ export default function contact() {
                       button {
                         background: none;
                         border: none;
+                      }
+
+                      .mLocation {
+                        padding-top: 2%;
+                      }
+                      .mFooter {
+                        background: #f2f3f5;
+                        padding-top: 2%;
                       }
                     }
                   `}

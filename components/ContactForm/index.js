@@ -19,7 +19,7 @@ export default function ContactForm() {
                   <div className="row">
                     <div className="col textbox">
                       <p className="textbox-p1">
-                        <span> Some line for this</span>
+                        <span> Some line for this </span>
                         Area to make it awesome
                       </p>
                       <p className="textbox-p2">
@@ -61,6 +61,10 @@ export default function ContactForm() {
                       .main {
                         background-color: #202940;
                       }
+                      .textbox {
+                        padding-top: 5%;
+                      }
+
                       span {
                         color: #ff6139;
                       }
@@ -78,6 +82,7 @@ export default function ContactForm() {
                         letter-spacing: normal;
                         text-align: left;
                         color: #ffffff;
+                        margin-left: 13%;
                       }
 
                       .textbox-p2 {
@@ -93,11 +98,12 @@ export default function ContactForm() {
                         letter-spacing: normal;
                         text-align: left;
                         color: #ffffff;
+                        margin-left: 13%;
                       }
                       .textbox-p3 {
                         width: 345px;
                         height: 289px;
-                        margin: 27px 0 53px;
+
                         font-family: Roboto;
                         font-size: 14px;
                         font-weight: normal;
@@ -107,6 +113,11 @@ export default function ContactForm() {
                         letter-spacing: normal;
                         text-align: left;
                         color: #ffffff;
+                        margin-left: 13%;
+                      }
+                      form {
+                        margin-left: 13%;
+                        padding-bottom: 2%;
                       }
 
                       input,

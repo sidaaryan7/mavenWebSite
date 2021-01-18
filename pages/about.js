@@ -36,20 +36,21 @@ export default function about() {
                       <div className="row">
                         <div className="col">
                           <div className=" firstCard">
-                            <div className="firstCard-p">
-                              <p>About Maven</p>
+                            <div>
+                              <p className="firstCard-p">About Maven</p>
                               <button
-                                class="dropbtn"
-                                className="blue-button"
+                                className="dropbtn1"
                                 onClick={() => {
                                   setActive("FirstCard");
                                 }}
                               >
-                                <i className="fa fa-caret-down"></i>
+                                <i className="fa fa-angle-down"></i>
                               </button>
                             </div>
                             <div className="cardcommon">
-                              {active === "FirstCard" && <AboutusMobileCard />}
+                              {active === "FirstCard" && (
+                                <AboutusMobileCard color={"#ffffff"} />
+                              )}
                             </div>
                           </div>
                         </div>
@@ -61,19 +62,20 @@ export default function about() {
                         <div className="col">
                           <div className="secondCard">
                             <div>
-                              ￼￼<p>Our Value System</p>
+                              ￼￼<p className="secondCard-p">Our Value System</p>
                               <button
-                                class="dropbtn"
-                                className="blue-button"
+                                className="dropbtn2"
                                 onClick={() => {
                                   setActive("SecondCard");
                                 }}
                               >
-                                <i className="fa fa-caret-down"></i>
+                                <i className="fa fa-angle-down"></i>
                               </button>
                             </div>
                             <div>
-                              {active === "SecondCard" && <AboutusMobileCard />}
+                              {active === "SecondCard" && (
+                                <AboutusMobileCard color={"#000000"} />
+                              )}
                             </div>
                           </div>
                         </div>
@@ -86,10 +88,9 @@ export default function about() {
                         <div className="col">
                           <div className="thirdCard">
                             <div>
-                              <p>Industry Focus</p>
+                              <p className="thirdCard-p">Industry Focus</p>
                               <button
-                                class="dropbtn"
-                                className="blue-button"
+                                className="dropbtn3"
                                 onClick={() => {
                                   setActive("ThirdCard");
                                 }}
@@ -98,7 +99,9 @@ export default function about() {
                               </button>
                             </div>
                             <div>
-                              {active === "ThirdCard" && <AboutusMobileCard />}
+                              {active === "ThirdCard" && (
+                                <AboutusMobileCard color={"#000000"} />
+                              )}
                             </div>
                           </div>
                         </div>
@@ -137,13 +140,29 @@ export default function about() {
                         background-size: 100%;
 
                         object-fit: cover;
+                        height:247px;
                       }
-                      p {
-                        color: white;
-                        display: inline;
-                        width: 151px;
+                     
+                      .mnavbar {
+                        padding-top: 5%;
+                      }
+                      .firstCard-p {
+                        font-size: 26px;
+                        font-weight: 500;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.73;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #ffffff;
+                        display:inline-block;
+}
+                      }
+
+                      .secondCard-p{
+                        
                         height: 29px;
-                        margin: 0 0px 0 0;
+                        
                         font-family: Poppins;
                         font-size: 21px;
                         font-weight: normal;
@@ -153,9 +172,23 @@ export default function about() {
                         letter-spacing: normal;
                         text-align: left;
                         color: #000000;
+                        display:inline-block;
                       }
-                      .firstcard-p p {
-                        background: #ffffff;
+
+                      .thirdCard-p{
+                      
+                        height: 29px;
+                        
+                        font-family: Poppins;
+                        font-size: 21px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.14;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #000000;
+                        display:inline-block;
                       }
                       .cards {
                         margin-top: 25%;
@@ -163,28 +196,45 @@ export default function about() {
                         margin-right: 9%;
                       }
                       .firstCard {
-                        width: 345px;
-                        margin: 8px 15px 15px;
+                        width: 100%;
+                        margin: 8px auto 15px;
                         padding: 22px 21.5px 24px 23px;
                         background-color: #ff6139;
                         overflow: hidden;
                         min-height: 75px;
                       }
+                      .dropbtn1 {
+                        margin-left: 50%;
+                        border: none;
+                        background: #ff6139;
+                      }
+
+                      .dropbtn2 {
+                        margin-left: 31%;
+                        border: none;
+                        background: #d0daf4;
+                      }
+
+                      .dropbtn3 {
+                        margin-left: 50%;
+                        border: none;
+                        background: #f4f4f4;
+                      }
 
                       .secondCard {
-                        width: 345px;
+                        width: 100%;
 
-                        margin: 8px 15px 15px;
+                        margin: 8px auto 15px;
                         padding: 22px 21.5px 24px 23px;
                         background-color: #d0daf4;
                         overflow: hidden;
                         min-height: 75px;
                       }
                       .thirdCard {
-                        width: 345px;
+                        width: 100%;
                         min-height: 75px;
                         overflow: hidden;
-                        margin: 15px 15px 20px;
+                        margin: 15px auto 20px;
                         padding: 23px 21.5px 23px 23px;
                         background-color: #f4f4f4;
                       }
@@ -192,6 +242,7 @@ export default function about() {
                       .mOurclient {
                         background: #f2f3f5;
                         padding-top: 5%;
+                        margin-top:87%;
                       }
 
                       .mOurclient p {

@@ -20,24 +20,26 @@ export default function Copywritefooter() {
                   <div className="row">
                     <div className="col d-flex justify-content-center">
                       <div className="socialicon">
-                        <Image
-                          src="/images/fb.svg"
-                          layout={"fixed"}
-                          height={20}
-                          width={50}
-                        ></Image>
-                        <Image
-                          src="/images/linkdin.svg"
-                          layout={"fixed"}
-                          height={20}
-                          width={50}
-                        ></Image>
-                        <Image
-                          src="/images/twitter.svg"
-                          layout={"fixed"}
-                          height={20}
-                          width={50}
-                        ></Image>
+                        <a>
+                          <i
+                            className="fab fa-facebook-f fa-2x"
+                            aria-hidden="true"
+                          ></i>
+                        </a>
+
+                        <a>
+                          <i
+                            className="fab  fa-linkedin-in  fa-2x"
+                            aria-hidden="true"
+                          ></i>
+                        </a>
+
+                        <a>
+                          <i
+                            className="fab fa-twitter fa-2x"
+                            aria-hidden="true"
+                          ></i>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -68,6 +70,10 @@ export default function Copywritefooter() {
                     }
                     .socialicon {
                       padding-top: 3%;
+                    }
+                    a {
+                      margin-right: 23px;
+                      color: white;
                     }
                   }
                 `}</style>

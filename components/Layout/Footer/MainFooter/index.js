@@ -37,7 +37,7 @@ export default function MainFooter() {
                           <p>About us</p>
                           <ul>
                             <li>
-                              <Link href="">
+                              <Link href="/about">
                                 <a>Who We are</a>
                               </Link>
                             </li>
@@ -61,7 +61,7 @@ export default function MainFooter() {
                               </Link>
                             </li>
                             <li>
-                              <Link href="">
+                              <Link href="/solutions/ExecutiveSearch">
                                 <a>Executive Search</a>
                               </Link>
                             </li>
