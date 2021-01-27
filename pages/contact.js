@@ -1,9 +1,7 @@
 import React from "react";
 import Footer from "../components/Layout/Footer";
 import Media from "react-media";
-
 import ContactForm from "../components/ContactForm";
-
 import NavBar from "../components/Layout/Header/NavBar";
 import Image from "next/image";
 import LocationMap from "../components/LocationMap";
@@ -74,6 +72,7 @@ export default function contact() {
                       }
 
                       .textbox {
+                        
                         background-color: #ff6139;
                         margin-left: 5%;
                         margin-right: 5%;

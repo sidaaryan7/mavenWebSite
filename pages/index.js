@@ -22,13 +22,14 @@ export default function Home() {
     <>
       <Media
         queries={{
-          small: "(max-width: 500px)",
+          small: "(max-width: 599px)",
           medium: "(min-width: 600px) and (max-width: 1199px)",
           large: "(min-width: 1200px)",
         }}
       >
         {(matches) => (
           <>
+            {/* LAYOUT FOR SMALL DEVICES STARTS */}
             {matches.small && (
               <>
                 <div className="mHeader">
@@ -94,12 +95,27 @@ export default function Home() {
                 </style>
               </>
             )}
-            {matches.medium && <p>I am medium!</p>}
+            {/* LAYOUT FOR SMALL DEVICES ENDS */}
+
+            {/*LAYOUT FOR MEDIUM DEVICES STARTS */}
+            {matches.medium && (
+              <>
+                <div className="medHeader">
+                  <Header />
+                </div>
+              </>
+            )}
+            {/*LAYOUT FOR MEDIUM DEVICES ENDS */}
+
+            {/*LAYOUT FOR LARGE DEVICES STARTS */}
+
             {matches.large && (
               <>
                 <>{loading ? <SplashScreen /> : <Header />}</>;
               </>
             )}
+
+            {/*LAYOUT FOR LARGE DEVICES ENDS */}
           </>
         )}
       </Media>

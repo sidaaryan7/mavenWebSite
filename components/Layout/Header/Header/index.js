@@ -21,13 +21,14 @@ export default function Header() {
     <>
       <Media
         queries={{
-          small: "(max-width: 500px)",
+          small: "(max-width: 599px)",
           medium: "(min-width: 600px) and (max-width: 1199px)",
           large: "(min-width: 1200px)",
         }}
       >
         {(matches) => (
           <>
+            {/* LAYOUT FOR SMALL DEVICES START */}
             {matches.small && (
               <>
                 <div className="row">
@@ -73,7 +74,135 @@ export default function Header() {
                 </style>
               </>
             )}
-            {matches.medium && <p>I am medium!</p>}
+
+            {/* LAYOUT FOR SMALL DEVICES ENDS */}
+
+            {/* LAYOUT FOR MEDIUM DEVICES START */}
+
+            {matches.medium && (
+              <>
+                {/* row start */}
+                <div className="row">
+                  {/* Navbar section  */}
+                  <div className="col-12 header">
+                    <NavBar color={"white"} logosrc={imgSrc} />
+
+                    {/*  orange & white text section  */}
+
+                    <div className="text-banner-section">
+                      <HomePageText />
+                    </div>
+                  </div>
+                </div>
+
+                {/* row end */}
+                <style jsx>
+                  {`
+                  {
+                   .header {
+                     background-image: radial-gradient(
+                         rgba(255, 255, 255, -0.15),
+                         rgba(0, 0, 0, 0.9)
+                       ),
+                       url("images/MaskGroup.png");
+                     background-repeat: no-repeat;
+                      
+                     background-size: 100%;
+                     height: 610px;
+                     object-fit: cover;
+                   }
+                 
+                   .text-banner-section {
+                     width: 80%;
+                     margin-top: 24.5%;
+                   }
+                   
+                 
+                   
+                 
+                 
+                      {/* RESPONSIVE CSS */}
+                 
+                      @media screen 
+                        and (min-width: 1560px) 
+                        and (max-width: 1812px) 
+                        and (-webkit-min-device-pixel-ratio: 1) { 
+                          .text-banner-section{
+                            margin-top:30%;
+                          }
+                        
+                      }
+                    
+                      @media screen 
+                        and (min-width: 1529px) 
+                        and (max-width: 1560px) 
+                        and (-webkit-min-device-pixel-ratio: 1) { 
+                          .text-banner-section{
+                            margin-top:31%;
+                          }
+                        
+                      }
+                    
+                      @media screen 
+                        and (min-width: 1497px) 
+                        and (max-width: 1529px) 
+                        and (-webkit-min-device-pixel-ratio: 1) { 
+                          .text-banner-section{
+                            margin-top:31.5%;
+                          }
+                        
+                      }
+                    
+                      @media screen 
+                        and (min-width:1455px ) 
+                        and (max-width: 1497px) 
+                        and (-webkit-min-device-pixel-ratio: 1) { 
+                          .text-banner-section{
+                            margin-top:32.5%;
+                          }
+                        
+                      }
+                    
+                      @media screen 
+                        and (min-width: 1421px) 
+                        and (max-width: 1455px) 
+                        and (-webkit-min-device-pixel-ratio: 1) { 
+                          .text-banner-section{
+                            margin-top:33.5%;
+                          }
+                        
+                      }
+                    
+                      @media screen 
+                        and (min-width: 1398px) 
+                        and (max-width: 1421px) 
+                        and (-webkit-min-device-pixel-ratio: 1) { 
+                          .text-banner-section{
+                            margin-top:34.5%;
+                          }
+                        
+                      }
+                    
+                      @media screen 
+                        and (min-width: 1371px) 
+                        and (max-width: 1398px) 
+                        and (-webkit-min-device-pixel-ratio: 1) { 
+                          .text-banner-section{
+                            margin-top:27.5%;
+                          }
+                        
+                      }
+                    
+                    
+                  `}
+                </style>
+              </>
+            )}
+
+            {/* LAYOUT FOR MEDIUM DEVICES ENDS */}
+
+            {/* LAYOUT FOR LARGE DEVICES START */}
+
             {matches.large && (
               <>
                 {/* row start */}
@@ -93,106 +222,107 @@ export default function Header() {
                 {/* row end */}
                 <style jsx>
                   {`
-           {
-            .header {
-              background-image: radial-gradient(
-                  rgba(255, 255, 255, -0.15),
-                  rgba(0, 0, 0, 0.9)
-                ),
-                url("images/MaskGroup.png");
-              background-repeat: no-repeat;
+                    {
+                     .header {
+                       background-image: radial-gradient(
+                           rgba(255, 255, 255, -0.15),
+                           rgba(0, 0, 0, 0.9)
+                         ),
+                         url("images/MaskGroup.png");
+                       background-repeat: no-repeat;
+                        
+                       background-size: 100%;
+                       height: 966px;
+                       object-fit: cover;
+                     }
+                   
+                     .text-banner-section {
+                       width: 80%;
+                       margin-top: 24.5%;
+                     }
+                     
+                   
+                     
+                   
+                   
+                        {/* RESPONSIVE CSS */}
 
-              background-size: 100%;
-              height: 966px;
-              object-fit: cover;
-            }
+                        @media screen 
+                          and (min-width: 1560px) 
+                          and (max-width: 1812px) 
+                          and (-webkit-min-device-pixel-ratio: 1) { 
+                            .text-banner-section{
+                              margin-top:30%;
+                            }
+                          
+                        }
 
-            .text-banner-section {
-              width: 80%;
-              margin-top: 24.5%;
-            }
-            
+                        @media screen 
+                          and (min-width: 1529px) 
+                          and (max-width: 1560px) 
+                          and (-webkit-min-device-pixel-ratio: 1) { 
+                            .text-banner-section{
+                              margin-top:31%;
+                            }
+                          
+                        }
 
-            
+                        @media screen 
+                          and (min-width: 1497px) 
+                          and (max-width: 1529px) 
+                          and (-webkit-min-device-pixel-ratio: 1) { 
+                            .text-banner-section{
+                              margin-top:31.5%;
+                            }
+                          
+                        }
 
+                        @media screen 
+                          and (min-width:1455px ) 
+                          and (max-width: 1497px) 
+                          and (-webkit-min-device-pixel-ratio: 1) { 
+                            .text-banner-section{
+                              margin-top:32.5%;
+                            }
+                          
+                        }
 
-{/* RESPONSIVE CSS */}
+                        @media screen 
+                          and (min-width: 1421px) 
+                          and (max-width: 1455px) 
+                          and (-webkit-min-device-pixel-ratio: 1) { 
+                            .text-banner-section{
+                              margin-top:33.5%;
+                            }
+                          
+                        }
 
-@media screen 
-  and (min-width: 1560px) 
-  and (max-width: 1812px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .text-banner-section{
-      margin-top:30%;
-    }
+                        @media screen 
+                          and (min-width: 1398px) 
+                          and (max-width: 1421px) 
+                          and (-webkit-min-device-pixel-ratio: 1) { 
+                            .text-banner-section{
+                              margin-top:34.5%;
+                            }
+                          
+                        }
 
-}
-
-@media screen 
-  and (min-width: 1529px) 
-  and (max-width: 1560px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .text-banner-section{
-      margin-top:31%;
-    }
-
-}
-
-@media screen 
-  and (min-width: 1497px) 
-  and (max-width: 1529px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .text-banner-section{
-      margin-top:31.5%;
-    }
-
-}
-
-@media screen 
-  and (min-width:1455px ) 
-  and (max-width: 1497px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .text-banner-section{
-      margin-top:32.5%;
-    }
-
-}
-
-@media screen 
-  and (min-width: 1421px) 
-  and (max-width: 1455px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .text-banner-section{
-      margin-top:33.5%;
-    }
-
-}
-
-@media screen 
-  and (min-width: 1398px) 
-  and (max-width: 1421px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .text-banner-section{
-      margin-top:34.5%;
-    }
-
-}
-
-@media screen 
-  and (min-width: 1371px) 
-  and (max-width: 1398px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .text-banner-section{
-      margin-top:27.5%;
-    }
-
-}
+                        @media screen 
+                          and (min-width: 1371px) 
+                          and (max-width: 1398px) 
+                          and (-webkit-min-device-pixel-ratio: 1) { 
+                            .text-banner-section{
+                              margin-top:27.5%;
+                            }
+                          
+                        }
 
 
-        `}
+                    `}
                 </style>
               </>
             )}
+            {/* LAYOUT FOR LARGE DEVICES ENDS */}
           </>
         )}
       </Media>

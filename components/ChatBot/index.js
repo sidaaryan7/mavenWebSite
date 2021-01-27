@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 
 export default class ChatBot extends Component {
-  render() {
+  render(props) {
+    console.log(this.props);
+
     return (
       <div>
         <div className="maindiv">
@@ -9,7 +11,7 @@ export default class ChatBot extends Component {
             <div>icon</div>
             <p className="header-p1">Myra</p>
             <p className="header-p2">Maven's Virtual Assistance</p>
-            <button />
+            <button onClick={this.props.close} />
           </div>
           <div className="chat">
             <p className="chat-p1">Hi I Am Myra</p>

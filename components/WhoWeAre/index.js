@@ -10,7 +10,7 @@ export default function WhoWeAre({ doSomething }) {
     <>
       <Media
         queries={{
-          small: "(max-width: 500px)",
+          small: "(max-width: 599px)",
           medium: "(min-width: 600px) and (max-width: 1199px)",
           large: "(min-width: 1200px)",
         }}
@@ -596,7 +596,7 @@ export default function WhoWeAre({ doSomething }) {
               @media screen and (min-width: 380px) and (max-width: 407px) { 
                 .iconrow{
                       padding-left: 0; */
-    padding-right: 0;
+                      padding-right: 0;
                   
                 }
                 .icon-1{
@@ -609,7 +609,30 @@ export default function WhoWeAre({ doSomething }) {
                   
                   
                 }
+               
 
+              }
+              @media screen and (min-width:280px) and (max-width:338px){
+                .text-box-p2{
+                  margin: 15px 13px 20% 0px;
+                }
+
+              }
+
+
+
+              @media screen and (min-width:100px ) and (max-width: 380px) { 
+                .iconrow{
+                      padding-left: 0; */
+                      padding-right: 0;
+                  
+                }
+                 
+                 
+                 .col{
+                 
+                        width:50%;
+                      }
               }
 
 
